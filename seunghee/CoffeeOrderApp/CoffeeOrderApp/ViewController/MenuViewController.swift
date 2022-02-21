@@ -7,15 +7,13 @@
 
 import UIKit
 
+
 class MenuViewController: UIViewController {
   
-  @IBOutlet weak var balanceLabel: UILabel!
-  @IBOutlet var productImageViews: [UIImageView]!
-  @IBOutlet var productNameLabvels: [UILabel]!
-  @IBOutlet var productPriceLabels: [UILabel]!
-  
   var menuList: [Product] = []
-
+  var favoriteMenuList: [Product] = []
+  var userCard = Card()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -29,15 +27,35 @@ class MenuViewController: UIViewController {
     menuList.append(JavachipFrapuccino())
     menuList.append(ChocolateCake())
     menuList.append(StrawberryCreamCake())
-    
-    for (i, product) in menuList.enumerated() {
-      productNameLabvels[i].text = product.name
-      productPriceLabels[i].text = "\(product.price)"
-      productImageViews[i].image = UIImage(named: product.imageName)
+  }
+}
+
+extension MenuViewController: CoffeeOrder {
+  func availableMenuList() -> [Product] {
+    var availableList: [Product] = []
+    for product in menuList {
+      if userCard.money >= product.price {
+        availableList.append(product)
+      }
     }
+    return availableList
   }
   
-  @IBAction func adminPageDidTap(_ sender: Any) {
-    
+  func order(product: Product, count: UInt) {
+    let totalPrice = product.price * UInt(count)
+    if totalPrice < userCard.money {
+      print("금액이 부족합니다..")
+    } else {
+      userCard.pay(amount: totalPrice)
+      print("\(product.name) \(count)개 주문이 완료되었습니다.")
+    }
+  }
+
+  func chargeCard(money: UInt) {
+    userCard.chargeMoney(money)
+  }
+  
+  func addFavoriteProduct(_ product: Product) {
+    favoriteMenuList.append(product)
   }
 }

@@ -8,9 +8,5 @@
 import Foundation
 
 class Cake: Product {
-    var numberOfStock: UInt = 0
-    
-    func addStock(numberOfNewStock: UInt) {
-        self.numberOfStock += numberOfNewStock
-    }
+    var numberOfCandles: UInt = 0
 }
