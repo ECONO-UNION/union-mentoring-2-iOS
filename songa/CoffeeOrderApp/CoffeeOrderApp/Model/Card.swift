@@ -8,7 +8,11 @@
 import Foundation
 
 class Card {
-    var money: Int = 0
+    var money: Int 
+    
+    init(money: Int){
+        self.money = money
+    }
     
     func charge(chargeMoney: Int) {
         money += chargeMoney
