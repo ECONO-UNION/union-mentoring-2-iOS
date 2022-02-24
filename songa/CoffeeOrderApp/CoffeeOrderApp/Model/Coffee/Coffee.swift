@@ -7,6 +7,6 @@
 
 import Foundation
 
-class Coffee {
+class Coffee: Menu{
     var isHot: Bool = false
 }

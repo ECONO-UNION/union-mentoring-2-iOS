@@ -8,5 +8,7 @@
 import Foundation
 
 class StrawberryCake: Cake {
-    
+    init() {
+        super.init(name: "StrawberryCake", price: 4000, stock: 6)
+    }
 }

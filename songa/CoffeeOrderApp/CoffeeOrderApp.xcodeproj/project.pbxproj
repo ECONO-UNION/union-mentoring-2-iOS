@@ -24,6 +24,7 @@
 		9CD2763B27C7AFE8003017CD /* HotChoco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2763A27C7AFE8003017CD /* HotChoco.swift */; };
 		9CD2763E27C7B080003017CD /* MenuOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2763D27C7B07F003017CD /* MenuOrderViewController.swift */; };
 		9CD2764027C7B3E1003017CD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2763F27C7B3E1003017CD /* Card.swift */; };
+		9CD2764227C7B4F9003017CD /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2764127C7B4F9003017CD /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		9CD2763A27C7AFE8003017CD /* HotChoco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotChoco.swift; sourceTree = "<group>"; };
 		9CD2763D27C7B07F003017CD /* MenuOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOrderViewController.swift; sourceTree = "<group>"; };
 		9CD2763F27C7B3E1003017CD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		9CD2764127C7B4F9003017CD /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				9CD2762627C7A90C003017CD /* Cake */,
 				9CD2762527C7A8F8003017CD /* Coffee */,
 				9CD2763F27C7B3E1003017CD /* Card.swift */,
+				9CD2764127C7B4F9003017CD /* Menu.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				9CD2763927C7AFC3003017CD /* Frappuccino.swift in Sources */,
 				9CD2763E27C7B080003017CD /* MenuOrderViewController.swift in Sources */,
 				9CD2761127C75861003017CD /* AppDelegate.swift in Sources */,
+				9CD2764227C7B4F9003017CD /* Menu.swift in Sources */,
 				9CD2764027C7B3E1003017CD /* Card.swift in Sources */,
 				9CD2762B27C7AAD0003017CD /* Americano.swift in Sources */,
 				9CD2761327C75861003017CD /* SceneDelegate.swift in Sources */,

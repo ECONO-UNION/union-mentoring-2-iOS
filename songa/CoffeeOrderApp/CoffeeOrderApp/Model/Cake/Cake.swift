@@ -7,6 +7,6 @@
 
 import Foundation
 
-class Cake {
+class Cake: Menu {
     var candleNumber: Int = 0
 }

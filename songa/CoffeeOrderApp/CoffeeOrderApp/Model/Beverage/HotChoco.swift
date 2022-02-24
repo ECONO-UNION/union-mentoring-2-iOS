@@ -8,5 +8,7 @@
 import Foundation
 
 class HotChoco: Beverage {
-    
+    init() {
+        super.init(name: "HotChoco", price: 2000, stock: 10)
+    }
 }

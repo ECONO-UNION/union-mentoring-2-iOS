@@ -7,6 +7,6 @@
 
 import Foundation
 
-class Beverage{
+class Beverage: Menu{
     var whippingCreamAdded: Bool = false
 }
