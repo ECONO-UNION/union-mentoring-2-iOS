@@ -16,6 +16,8 @@ class MenuOrderViewController: UIViewController{
         super.viewDidLoad()
         showMenuList()
         setMenuList()
+        order(orderMenu: HotChoco(), quantity: 5)
+        checkOrderAvailableMenu()
     }
     
     func showMenuList(){
@@ -34,7 +36,13 @@ class MenuOrderViewController: UIViewController{
     }
     
     func order(orderMenu: Menu, quantity: Int){
+        if orderMenu.stock < quantity {
+            print("이 메뉴는 현재 재고가 부족합니다.")
+        }
         
+        if (orderMenu.price * quantity) > card.money {
+            print("카드에 금액이 부족합니다.")
+        }
     }
     
     func checkOrderAvailableMenu(){
