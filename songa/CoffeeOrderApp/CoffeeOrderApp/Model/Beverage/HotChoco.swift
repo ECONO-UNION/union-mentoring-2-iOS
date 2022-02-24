@@ -8,7 +8,12 @@
 import Foundation
 
 class HotChoco: Beverage {
-    init() {
+    init(){
         super.init(name: "HotChoco", price: 2000, stock: 10)
+    }
+    
+    init(whippingCreamAdded: Bool) {
+        super.init(name: "HotChoco", price: 2000, stock: 10)
+        self.whippingCreamAdded = whippingCreamAdded
     }
 }

@@ -17,9 +17,9 @@ class MenuOrderViewController: UIViewController{
         super.viewDidLoad()
         showMenuList()
         setMenuList()
-        order(orderMenu: HotChoco(), quantity: 5)
+        order(orderMenu: HotChoco(whippingCreamAdded: true), quantity: 5)
         checkOrderAvailableMenu()
-        addFavoriteMenu(menu: VanillaLatte())
+        addFavoriteMenu(menu: VanillaLatte(isHot: false))
         showFavoriteMenuList()
     }
     
