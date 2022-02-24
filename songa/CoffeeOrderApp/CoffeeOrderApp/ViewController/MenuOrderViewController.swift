@@ -11,6 +11,7 @@ import UIKit
 class MenuOrderViewController: UIViewController{
     var card: Card = Card(money: 5000)
     var menuList: [Menu] = []
+    var favoriteMenu: [Menu] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,8 @@ class MenuOrderViewController: UIViewController{
         setMenuList()
         order(orderMenu: HotChoco(), quantity: 5)
         checkOrderAvailableMenu()
+        addFavoriteMenu(menu: VanillaLatte())
+        showFavoriteMenuList()
     }
     
     func showMenuList(){
@@ -53,5 +56,17 @@ class MenuOrderViewController: UIViewController{
             }
         }
         print("현재 금액으로 주문할 수 있는 메뉴는 \(orderAvailableMenuName)입니다.")
+    }
+    
+    func addFavoriteMenu(menu: Menu){
+        favoriteMenu.append(menu)
+    }
+    
+    func showFavoriteMenuList(){
+        var favoriteMenuListStr: String = ""
+        for i in 0..<favoriteMenu.count{
+            favoriteMenuListStr += favoriteMenu[i].name + " "
+        }
+        print("즐겨찾기 목록 : \(favoriteMenuListStr)")
     }
 }
