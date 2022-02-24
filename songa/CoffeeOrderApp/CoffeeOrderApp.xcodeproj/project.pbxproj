@@ -13,6 +13,15 @@
 		9CD2761827C75861003017CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD2761627C75861003017CD /* Main.storyboard */; };
 		9CD2761A27C75863003017CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD2761927C75863003017CD /* Assets.xcassets */; };
 		9CD2761D27C75863003017CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD2761B27C75863003017CD /* LaunchScreen.storyboard */; };
+		9CD2762927C7A922003017CD /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2762827C7A922003017CD /* Coffee.swift */; };
+		9CD2762B27C7AAD0003017CD /* Americano.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2762A27C7AAD0003017CD /* Americano.swift */; };
+		9CD2762F27C7AB8F003017CD /* VanillaLatte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2762E27C7AB8F003017CD /* VanillaLatte.swift */; };
+		9CD2763127C7ABAF003017CD /* Cake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2763027C7ABAF003017CD /* Cake.swift */; };
+		9CD2763327C7ABC3003017CD /* StrawberryCake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2763227C7ABC3003017CD /* StrawberryCake.swift */; };
+		9CD2763527C7ABED003017CD /* ChocoCake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2763427C7ABED003017CD /* ChocoCake.swift */; };
+		9CD2763727C7AF6F003017CD /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2763627C7AF6F003017CD /* Beverage.swift */; };
+		9CD2763927C7AFC3003017CD /* Frappuccino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2763827C7AFC3003017CD /* Frappuccino.swift */; };
+		9CD2763B27C7AFE8003017CD /* HotChoco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2763A27C7AFE8003017CD /* HotChoco.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		9CD2761927C75863003017CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CD2761C27C75863003017CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CD2761E27C75863003017CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CD2762827C7A922003017CD /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		9CD2762A27C7AAD0003017CD /* Americano.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Americano.swift; sourceTree = "<group>"; };
+		9CD2762E27C7AB8F003017CD /* VanillaLatte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanillaLatte.swift; sourceTree = "<group>"; };
+		9CD2763027C7ABAF003017CD /* Cake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cake.swift; sourceTree = "<group>"; };
+		9CD2763227C7ABC3003017CD /* StrawberryCake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrawberryCake.swift; sourceTree = "<group>"; };
+		9CD2763427C7ABED003017CD /* ChocoCake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChocoCake.swift; sourceTree = "<group>"; };
+		9CD2763627C7AF6F003017CD /* Beverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
+		9CD2763827C7AFC3003017CD /* Frappuccino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frappuccino.swift; sourceTree = "<group>"; };
+		9CD2763A27C7AFE8003017CD /* HotChoco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotChoco.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 		9CD2760F27C75861003017CD /* CoffeeOrderApp */ = {
 			isa = PBXGroup;
 			children = (
+				9CD2762427C7A8EC003017CD /* Model */,
 				9CD2761027C75861003017CD /* AppDelegate.swift */,
 				9CD2761227C75861003017CD /* SceneDelegate.swift */,
 				9CD2761427C75861003017CD /* ViewController.swift */,
@@ -65,6 +84,46 @@
 				9CD2761E27C75863003017CD /* Info.plist */,
 			);
 			path = CoffeeOrderApp;
+			sourceTree = "<group>";
+		};
+		9CD2762427C7A8EC003017CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CD2762727C7A914003017CD /* Beverage */,
+				9CD2762627C7A90C003017CD /* Cake */,
+				9CD2762527C7A8F8003017CD /* Coffee */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9CD2762527C7A8F8003017CD /* Coffee */ = {
+			isa = PBXGroup;
+			children = (
+				9CD2762827C7A922003017CD /* Coffee.swift */,
+				9CD2762A27C7AAD0003017CD /* Americano.swift */,
+				9CD2762E27C7AB8F003017CD /* VanillaLatte.swift */,
+			);
+			path = Coffee;
+			sourceTree = "<group>";
+		};
+		9CD2762627C7A90C003017CD /* Cake */ = {
+			isa = PBXGroup;
+			children = (
+				9CD2763027C7ABAF003017CD /* Cake.swift */,
+				9CD2763227C7ABC3003017CD /* StrawberryCake.swift */,
+				9CD2763427C7ABED003017CD /* ChocoCake.swift */,
+			);
+			path = Cake;
+			sourceTree = "<group>";
+		};
+		9CD2762727C7A914003017CD /* Beverage */ = {
+			isa = PBXGroup;
+			children = (
+				9CD2763627C7AF6F003017CD /* Beverage.swift */,
+				9CD2763827C7AFC3003017CD /* Frappuccino.swift */,
+				9CD2763A27C7AFE8003017CD /* HotChoco.swift */,
+			);
+			path = Beverage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +197,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD2763B27C7AFE8003017CD /* HotChoco.swift in Sources */,
+				9CD2763727C7AF6F003017CD /* Beverage.swift in Sources */,
+				9CD2763327C7ABC3003017CD /* StrawberryCake.swift in Sources */,
+				9CD2762F27C7AB8F003017CD /* VanillaLatte.swift in Sources */,
+				9CD2763527C7ABED003017CD /* ChocoCake.swift in Sources */,
 				9CD2761527C75861003017CD /* ViewController.swift in Sources */,
+				9CD2763927C7AFC3003017CD /* Frappuccino.swift in Sources */,
 				9CD2761127C75861003017CD /* AppDelegate.swift in Sources */,
+				9CD2762B27C7AAD0003017CD /* Americano.swift in Sources */,
 				9CD2761327C75861003017CD /* SceneDelegate.swift in Sources */,
+				9CD2762927C7A922003017CD /* Coffee.swift in Sources */,
+				9CD2763127C7ABAF003017CD /* Cake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
