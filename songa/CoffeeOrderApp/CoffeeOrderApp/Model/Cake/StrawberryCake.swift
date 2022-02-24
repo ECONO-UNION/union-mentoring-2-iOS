@@ -14,6 +14,10 @@ class StrawberryCake: Cake {
     
     init(candleNumber: Int) {
         super.init(name: "StrawberryCake", price: 4000, stock: 6)
-        self.candleNumber = candleNumber
+        if candleNumber <= 100 {
+            self.candleNumber = candleNumber
+        }else{
+            print("초는 100개 이하로 주문해주세요.")
+        }
     }
 }
