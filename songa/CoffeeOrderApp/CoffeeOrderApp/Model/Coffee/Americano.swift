@@ -8,11 +8,7 @@
 import Foundation
 
 class Americano: Coffee {
-    init(){
-        super.init(name: "Americano", price: 1000, stock: 20)
-    }
-    
-    init(isHot: Bool) {
+    init(isHot: Bool = false) {
         super.init(name: "Americano", price: 1000, stock: 20)
         self.isHot = isHot
     }

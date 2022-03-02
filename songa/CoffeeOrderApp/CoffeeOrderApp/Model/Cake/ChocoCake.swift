@@ -8,11 +8,7 @@
 import Foundation
 
 class ChocoCake: Cake {
-    init(){
-        super.init(name: "ChocoCake", price: 4000, stock: 6)
-    }
-    
-    init(candleNumber: Int) {
+    init(candleNumber: Int = 0) {
         super.init(name: "ChocoCake", price: 4000, stock: 6)
         self.candleNumber = candleNumber
     }
