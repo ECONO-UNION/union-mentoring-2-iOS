@@ -41,11 +41,14 @@ class MenuOrderViewController: UIViewController{
     func order(menu: Menu, quantity: Int){
         if menu.stock < quantity {
             print("이 메뉴는 현재 재고가 부족합니다.")
+            return
         }
         
         if (menu.price * quantity) > card.money {
             print("카드에 금액이 부족합니다.")
+            return
         }
+        card.money -= menu.price
     }
     
     func checkOrderAvailableMenu(){
