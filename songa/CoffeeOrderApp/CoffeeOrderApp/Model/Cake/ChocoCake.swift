@@ -8,8 +8,13 @@
 import Foundation
 
 class ChocoCake: Cake {
-    init(candleNumber: Int = 0) {
+    init?(candleNumber: Int = 0) {
         super.init(name: "ChocoCake", price: 4000, stock: 6)
-        self.candleNumber = candleNumber
+        if candleNumber <= 100 {
+            self.candleNumber = candleNumber
+        }else{
+            print("초는 100개 이하로 주문해주세요.")
+            return nil
+        }
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class MenuOrderViewController: UIViewController{
     var card: Card = Card(money: 5000)
-    var menuList: [Menu] = []
+    var menuList: [Menu?] = []
     var favoriteMenu: [Menu] = []
     
     override func viewDidLoad() {
@@ -51,8 +51,11 @@ class MenuOrderViewController: UIViewController{
     func checkOrderAvailableMenu(){
         var orderAvailableMenuName: String = ""
         for i in 0..<menuList.count{
-            if menuList[i].price < card.money {
-                orderAvailableMenuName += menuList[i].name + " "
+            if let menu = menuList[i]  {
+                if menu.price < card.money {
+                    orderAvailableMenuName += menu.name + " "
+                }
+            }else{
             }
         }
         print("현재 금액으로 주문할 수 있는 메뉴는 \(orderAvailableMenuName)입니다.")
