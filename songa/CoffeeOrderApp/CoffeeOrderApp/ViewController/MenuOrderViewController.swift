@@ -17,7 +17,7 @@ class MenuOrderViewController: UIViewController{
         super.viewDidLoad()
         showMenuList()
         setMenuList()
-        order(orderMenu: HotChoco(whippingCreamAdded: true), quantity: 5)
+        order(menu: HotChoco(whippingCreamAdded: true), quantity: 5)
         checkOrderAvailableMenu()
         addFavoriteMenu(menu: VanillaLatte(isHot: false))
         showFavoriteMenuList()
@@ -38,12 +38,12 @@ class MenuOrderViewController: UIViewController{
         menuList.append(VanillaLatte())
     }
     
-    func order(orderMenu: Menu, quantity: Int){
-        if orderMenu.stock < quantity {
+    func order(menu: Menu, quantity: Int){
+        if menu.stock < quantity {
             print("이 메뉴는 현재 재고가 부족합니다.")
         }
         
-        if (orderMenu.price * quantity) > card.money {
+        if (menu.price * quantity) > card.money {
             print("카드에 금액이 부족합니다.")
         }
     }
