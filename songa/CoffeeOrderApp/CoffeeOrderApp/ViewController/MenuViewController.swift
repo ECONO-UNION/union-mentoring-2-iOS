@@ -9,12 +9,16 @@ import Foundation
 import UIKit
 
 class MenuViewController: UIViewController{
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var card: Card = Card(money: 5000)
     var menuList: [Menu] = []
     var favoriteMenu: [Menu] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setCollectionView()
+        
         showMenuList()
         setMenuList()
         order(menu: HotChoco(whippingCreamAdded: true), quantity: 5)
@@ -71,5 +75,28 @@ class MenuViewController: UIViewController{
             favoriteMenuListStr += favoriteMenu[i].name + " "
         }
         print("즐겨찾기 목록 : \(favoriteMenuListStr)")
+    }
+}
+extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return menuList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as?
+                MenuCell else {
+                    return UICollectionViewCell()
+                }
+        cell.initCell(name: menuList[indexPath.row].name, price: menuList[indexPath.row].price)
+        return cell
+    }
+    
+    func setCollectionView(){
+        let flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        let itemSpacing: CGFloat = 5 // 가로에서 cell과 cell 사이의 거리
+        let width: CGFloat = (collectionView.bounds.width)/2 - itemSpacing // 셀 하나의 너비
+        let height: CGFloat = width * 10/7 //셀 하나의 높이
+        flowLayout.itemSize = CGSize(width: width, height: height)
+        self.collectionView.collectionViewLayout = flowLayout
     }
 }
