@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class MenuOrderViewController: UIViewController{
+class MenuViewController: UIViewController{
     var card: Card = Card(money: 5000)
     var menuList: [Menu] = []
     var favoriteMenu: [Menu] = []
