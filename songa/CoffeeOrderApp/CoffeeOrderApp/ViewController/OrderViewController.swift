@@ -32,6 +32,15 @@ class OrderViewController: UIViewController, OrderDelegate{
     
     func setPresentOrderPrice(price: Int) {
         orderPriceLabel.text = "\(price)원"
+        self.price = price
+    }
+    
+    @IBAction func touchOrderButton(){
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MenuVC") as? MenuViewController else {
+            return
+        }
+        vc.card.money -= price
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
