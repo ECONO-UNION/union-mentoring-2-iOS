@@ -10,6 +10,7 @@ import UIKit
 
 class MenuViewController: UIViewController{
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var cardMoneyLabel: UILabel!
     
     var card: Card = Card(money: 5000)
     var menuList: [Menu] = []
@@ -25,6 +26,11 @@ class MenuViewController: UIViewController{
         checkOrderAvailableMenu()
         addFavoriteMenu(menu: VanillaLatte(isHot: false))
         showFavoriteMenuList()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        cardMoneyLabel.text = "\(card.money)원"
     }
     
     func showMenuList(){
@@ -75,6 +81,13 @@ class MenuViewController: UIViewController{
             favoriteMenuListStr += favoriteMenu[i].name + " "
         }
         print("즐겨찾기 목록 : \(favoriteMenuListStr)")
+    }
+    
+    @IBAction func touchChargeButton(){
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "CardChargeVC") as? CardChargeViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSource {
