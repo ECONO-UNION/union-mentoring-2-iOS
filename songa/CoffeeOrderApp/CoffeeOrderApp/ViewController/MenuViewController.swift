@@ -101,10 +101,10 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(menuList[indexPath.row].name)
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "OrderVC") else {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "OrderVC") as? OrderViewController else {
             return
         }
+        vc.name = menuList[indexPath.row].name
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
