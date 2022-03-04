@@ -119,6 +119,10 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
         vc.name = menuList[indexPath.row].name
         vc.price = menuList[indexPath.row].price
+        vc.completionHandler = { price in
+            self.card.money -= price
+            self.cardMoneyLabel.text = "\(self.card.money)원"
+        }
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

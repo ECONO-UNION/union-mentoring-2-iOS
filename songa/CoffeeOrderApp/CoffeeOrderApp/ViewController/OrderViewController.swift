@@ -15,7 +15,9 @@ class OrderViewController: UIViewController, OrderDelegate{
 
     var name: String = ""
     var price: Int = 0
+    var money: Int = 0
     var delegate: OrderDelegate?
+    var completionHandler: ((Int) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,15 +34,12 @@ class OrderViewController: UIViewController, OrderDelegate{
     
     func setPresentOrderPrice(price: Int) {
         orderPriceLabel.text = "\(price)원"
-        self.price = price
+        money = price
     }
     
     @IBAction func touchOrderButton(){
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MenuVC") as? MenuViewController else {
-            return
-        }
-        vc.card.money -= price
-        self.navigationController?.pushViewController(vc, animated: true)
+        _ = completionHandler?(money)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
