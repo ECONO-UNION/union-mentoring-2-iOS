@@ -13,4 +13,8 @@ class CardChargeViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func exitButton(_ sender: UIButton) {
+            self.dismiss(animated: true, completion: nil)
+    }
 }

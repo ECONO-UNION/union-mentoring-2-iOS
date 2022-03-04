@@ -82,13 +82,6 @@ class MenuViewController: UIViewController{
         }
         print("즐겨찾기 목록 : \(favoriteMenuListStr)")
     }
-    
-    @IBAction func touchChargeButton(){
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "CardChargeVC") as? CardChargeViewController else {
-            return
-        }
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
 }
 extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
