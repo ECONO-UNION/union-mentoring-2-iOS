@@ -8,20 +8,33 @@
 import Foundation
 import UIKit
 
-class OrderViewController: UIViewController{
+class OrderViewController: UIViewController, OrderDelegate{
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var orderPriceLabel: UILabel!
 
-    
     var name: String = ""
+    var price: Int = 0
+    var delegate: OrderDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        delegate = self
         nameLabel.text = name
+        orderPriceLabel.text = "\(price)원"
     }
     
     @IBAction func presentStepper(_ sender: UIStepper){
-        quantityLabel.text = String(Int(sender.value))+"개"
+        let quantity = Int(sender.value)
+        quantityLabel.text = String(quantity)+"개"
+        delegate?.setPresentOrderPrice(price: quantity * price)
     }
+    
+    func setPresentOrderPrice(price: Int) {
+        orderPriceLabel.text = "\(price)원"
+    }
+}
+
+protocol OrderDelegate {
+    func setPresentOrderPrice(price: Int)
 }

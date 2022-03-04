@@ -105,6 +105,7 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return
         }
         vc.name = menuList[indexPath.row].name
+        vc.price = menuList[indexPath.row].price
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
