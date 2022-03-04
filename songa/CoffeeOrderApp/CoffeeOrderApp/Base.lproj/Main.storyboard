@@ -24,17 +24,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZk-Qh-zyt">
-                                <rect key="frame" x="182" y="148" width="44" height="30"/>
+                                <rect key="frame" x="172" y="148" width="44" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hun-5R-fGk">
-                                <rect key="frame" x="291" y="148" width="73" height="31"/>
+                                <rect key="frame" x="301" y="148" width="73" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="충전하기"/>
                                 <connections>
-                                    <segue destination="CMc-Ei-8jx" kind="presentation" id="GZr-eF-ZOq"/>
+                                    <action selector="touchChargeButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="mKx-rs-Jvq"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l3o-7o-MzA">
@@ -101,8 +101,8 @@
                         <constraints>
                             <constraint firstItem="ziE-GX-mWR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="9p6-as-85q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="l3o-7o-MzA" secondAttribute="bottom" constant="10" id="JcL-IZ-DxT"/>
-                            <constraint firstItem="DZk-Qh-zyt" firstAttribute="leading" secondItem="ziE-GX-mWR" secondAttribute="trailing" constant="40" id="KES-eM-RaC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hun-5R-fGk" secondAttribute="trailing" constant="50" id="QO3-Ud-eIz"/>
+                            <constraint firstItem="DZk-Qh-zyt" firstAttribute="leading" secondItem="ziE-GX-mWR" secondAttribute="trailing" constant="30" id="KES-eM-RaC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hun-5R-fGk" secondAttribute="trailing" constant="40" id="QO3-Ud-eIz"/>
                             <constraint firstItem="DZk-Qh-zyt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Ql0-bu-X65"/>
                             <constraint firstItem="hun-5R-fGk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="hC3-ei-9M0"/>
                             <constraint firstItem="l3o-7o-MzA" firstAttribute="top" secondItem="ziE-GX-mWR" secondAttribute="bottom" constant="50" id="hhb-Zs-Kcd"/>
@@ -209,11 +209,11 @@
             <objects>
                 <viewController storyboardIdentifier="CardChargeVC" id="CMc-Ei-8jx" customClass="CardChargeViewController" customModule="CoffeeOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OHy-ja-dNP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q89-DR-H2L">
-                                <rect key="frame" x="359.5" y="30" width="43.5" height="31"/>
+                                <rect key="frame" x="359.5" y="74" width="43.5" height="31"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="xmark.app" catalog="system"/>
@@ -221,14 +221,57 @@
                                     <action selector="exitButton:" destination="CMc-Ei-8jx" eventType="touchUpInside" id="2Uc-xB-NtC"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditcard.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YsX-cD-UJU">
+                                <rect key="frame" x="87" y="245.5" width="240" height="128"/>
+                                <color key="tintColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="131.5" id="PPL-po-Qdu"/>
+                                    <constraint firstAttribute="width" constant="240" id="UVc-7c-ZyD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVT-M3-8yT">
+                                <rect key="frame" x="175" y="437.5" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10000" minimumValue="10000" maximumValue="1000000000" stepValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="m2P-vh-wCf">
+                                <rect key="frame" x="160" y="528.5" width="94" height="32"/>
+                                <connections>
+                                    <action selector="presentStepper:" destination="CMc-Ei-8jx" eventType="touchUpInside" id="F9R-se-aYb"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9c-cf-hWj">
+                                <rect key="frame" x="107" y="739" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="JGa-tE-ZLV"/>
+                                    <constraint firstAttribute="height" constant="40" id="OCa-F9-qie"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="충전하기"/>
+                                <connections>
+                                    <action selector="touchChargeButton:" destination="CMc-Ei-8jx" eventType="touchUpInside" id="19J-2P-4WS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bMm-7B-LDD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="m2P-vh-wCf" firstAttribute="centerX" secondItem="OHy-ja-dNP" secondAttribute="centerX" id="07A-db-TNG"/>
+                            <constraint firstItem="YsX-cD-UJU" firstAttribute="top" secondItem="bMm-7B-LDD" secondAttribute="top" constant="200" id="9j6-kn-CcC"/>
+                            <constraint firstItem="QVT-M3-8yT" firstAttribute="centerX" secondItem="OHy-ja-dNP" secondAttribute="centerX" id="PU7-tA-B4K"/>
+                            <constraint firstItem="m2P-vh-wCf" firstAttribute="top" secondItem="QVT-M3-8yT" secondAttribute="bottom" constant="70" id="PdH-KX-gZG"/>
+                            <constraint firstItem="YsX-cD-UJU" firstAttribute="centerX" secondItem="OHy-ja-dNP" secondAttribute="centerX" id="Qhf-4G-5U0"/>
+                            <constraint firstItem="bMm-7B-LDD" firstAttribute="bottom" secondItem="W9c-cf-hWj" secondAttribute="bottom" constant="83" id="Rx3-2C-68L"/>
                             <constraint firstItem="bMm-7B-LDD" firstAttribute="trailing" secondItem="q89-DR-H2L" secondAttribute="trailing" constant="11" id="bGf-GG-RMo"/>
+                            <constraint firstItem="W9c-cf-hWj" firstAttribute="centerX" secondItem="OHy-ja-dNP" secondAttribute="centerX" id="nWs-dc-7YL"/>
+                            <constraint firstItem="QVT-M3-8yT" firstAttribute="centerY" secondItem="OHy-ja-dNP" secondAttribute="centerY" id="qgv-8Q-yWi"/>
                             <constraint firstItem="q89-DR-H2L" firstAttribute="top" secondItem="bMm-7B-LDD" secondAttribute="top" constant="30" id="yYq-tT-ndc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="moneyLabel" destination="QVT-M3-8yT" id="cDb-JP-ZQJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ztd-44-dtB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -255,6 +298,7 @@
     </scenes>
     <resources>
         <image name="cloud" catalog="system" width="128" height="88"/>
+        <image name="creditcard.fill" catalog="system" width="128" height="88"/>
         <image name="xmark.app" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -26,10 +26,6 @@ class MenuViewController: UIViewController{
         checkOrderAvailableMenu()
         addFavoriteMenu(menu: VanillaLatte(isHot: false))
         showFavoriteMenuList()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         cardMoneyLabel.text = "\(card.money)원"
     }
     
@@ -81,6 +77,17 @@ class MenuViewController: UIViewController{
             favoriteMenuListStr += favoriteMenu[i].name + " "
         }
         print("즐겨찾기 목록 : \(favoriteMenuListStr)")
+    }
+    
+    @IBAction func touchChargeButton(){
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "CardChargeVC") as? CardChargeViewController else {
+            return
+        }
+        vc.completionHandler = { money in
+            self.card.money += money
+            self.cardMoneyLabel.text = "\(self.card.money)원"
+        }
+        self.present(vc, animated: true, completion: nil)
     }
 }
 extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSource {
