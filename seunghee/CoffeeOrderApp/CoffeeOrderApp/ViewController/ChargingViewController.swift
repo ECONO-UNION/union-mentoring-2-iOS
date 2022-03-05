@@ -26,9 +26,7 @@ class ChargingViewController: UIViewController {
   }
   
   @IBAction func chargeButtonDidTap(_ sender: Any) {
-    dismiss(animated: true, completion: { [weak self] in
-      guard let self = self else { return }
-      self.completion?(self.amount)
-    })
+    completion?(amount)
+    dismiss(animated: true, completion: nil)
   }
 }

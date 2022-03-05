@@ -60,7 +60,8 @@ class MenuViewController: UIViewController {
   @IBAction func chargingButtonDidTap(_ sender: Any) {
     let id = String(describing: ChargingViewController.self)
     if let chargingVC = storyboard?.instantiateViewController(withIdentifier: id) as? ChargingViewController {
-      chargingVC.completion = { amount in
+      chargingVC.completion = { [weak self] amount in
+        guard let self = self else { return }
         self.userCard.chargeMoney(UInt(amount))
         self.updateCardBalance()
       }
