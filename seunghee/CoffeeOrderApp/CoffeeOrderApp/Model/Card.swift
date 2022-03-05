@@ -11,7 +11,7 @@ class Card {
   var money: UInt = 0
   
   func chargeMoney(_ amount: UInt) {
-    if amount % 10000 == 0 {
+    if amount % 10000 != 0 {
       print("금액은 만 원 단위로 충전이 가능합니다.")
       return
     }

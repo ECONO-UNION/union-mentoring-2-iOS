@@ -10,6 +10,11 @@ import UIKit
 
 class MenuViewController: UIViewController {
   
+  @IBOutlet weak var balanceLabel: UILabel!
+  @IBOutlet var menuImageViewList: [UIImageView]!
+  @IBOutlet var menuNameLabelList: [UILabel]!
+  @IBOutlet var menuPriceLabelList: [UILabel]!
+  
   var menuList: [Product] = []
   var favoriteMenuList: [Product] = []
   var userCard = Card()
@@ -30,6 +35,27 @@ class MenuViewController: UIViewController {
     if let cake = StrawberryCreamCake(numberOfCandles: 30) {
       menuList.append(cake)
     }
+  }
+  
+  private func updateCardBalance() {
+    DispatchQueue.main.async {
+      self.balanceLabel.text = "\(self.userCard.money) 원"
+    }
+  }
+  
+  @IBAction func chargingButtonDidTap(_ sender: Any) {
+    let id = String(describing: ChargingViewController.self)
+    if let chargingVC = storyboard?.instantiateViewController(withIdentifier: id) as? ChargingViewController {
+      chargingVC.completion = { amount in
+        self.userCard.chargeMoney(UInt(amount))
+        self.updateCardBalance()
+      }
+      present(chargingVC, animated: true, completion: nil)
+    }
+  }
+  
+  @IBAction func menuButtonDidTap(_ sender: Any) {
+    
   }
 }
 

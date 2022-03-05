@@ -25,6 +25,7 @@
 		0B7168F627BCC5C3007B0BBF /* ChocolateCake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7168F527BCC5C3007B0BBF /* ChocolateCake.swift */; };
 		F72DC02227C37FE30076A52B /* CoffeeOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72DC02127C37FE30076A52B /* CoffeeOrder.swift */; };
 		F72DC02427C380380076A52B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72DC02327C380380076A52B /* Card.swift */; };
+		F7682BC727D3B8CE00462BEA /* ChargingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7682BC627D3B8CE00462BEA /* ChargingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		0B7168F527BCC5C3007B0BBF /* ChocolateCake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChocolateCake.swift; sourceTree = "<group>"; };
 		F72DC02127C37FE30076A52B /* CoffeeOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeOrder.swift; sourceTree = "<group>"; };
 		F72DC02327C380380076A52B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		F7682BC627D3B8CE00462BEA /* ChargingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				F72DC02027C37FDB0076A52B /* Interface */,
 				0B7168E727BC943C007B0BBF /* MenuViewController.swift */,
+				F7682BC627D3B8CE00462BEA /* ChargingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				F72DC02227C37FE30076A52B /* CoffeeOrder.swift in Sources */,
 				F72DC02427C380380076A52B /* Card.swift in Sources */,
 				0B3985F227BC921A009A081D /* SceneDelegate.swift in Sources */,
+				F7682BC727D3B8CE00462BEA /* ChargingViewController.swift in Sources */,
 				0B7168E227BC9311007B0BBF /* Coffee.swift in Sources */,
 				0B7168F227BCC4A3007B0BBF /* Latte.swift in Sources */,
 				0B7168F027BCBBAF007B0BBF /* Americano.swift in Sources */,
