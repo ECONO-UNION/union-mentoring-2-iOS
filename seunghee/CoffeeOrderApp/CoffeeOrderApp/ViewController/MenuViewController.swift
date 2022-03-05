@@ -23,6 +23,7 @@ class MenuViewController: UIViewController {
     super.viewDidLoad()
     
     settingMenu()
+    configureView()
   }
   
   private func settingMenu() {
@@ -34,6 +35,19 @@ class MenuViewController: UIViewController {
     
     if let cake = StrawberryCreamCake(numberOfCandles: 30) {
       menuList.append(cake)
+    }
+  }
+  
+  private func configureView() {
+    for i in 0..<menuList.count {
+      guard i < menuImageViewList.count,
+            i < menuNameLabelList.count,
+            i < menuPriceLabelList.count else { return }
+      
+      let product = menuList[i]
+      menuImageViewList[i].image = UIImage(named: product.imageName)
+      menuNameLabelList[i].text = product.name
+      menuPriceLabelList[i].text = "\(Int(product.price))"
     }
   }
   
@@ -61,6 +75,7 @@ class MenuViewController: UIViewController {
     let id = String(describing: OrderViewController.self)
     if let orderVC = storyboard?.instantiateViewController(withIdentifier: id) as? OrderViewController {
       orderVC.product = menuList[index]
+      orderVC.delegate = self
       navigationController?.pushViewController(orderVC, animated: true)
     }
   }
@@ -79,10 +94,11 @@ extension MenuViewController: CoffeeOrder {
   
   func order(product: Product, count: UInt) {
     let totalPrice = product.price * UInt(count)
-    if totalPrice < userCard.money {
+    if userCard.money < totalPrice {
       print("금액이 부족합니다..")
     } else {
       userCard.pay(amount: totalPrice)
+      updateCardBalance()
       print("\(product.name) \(count)개 주문이 완료되었습니다.")
     }
   }
@@ -93,5 +109,11 @@ extension MenuViewController: CoffeeOrder {
   
   func addFavoriteProduct(_ product: Product) {
     favoriteMenuList.append(product)
+  }
+}
+
+extension MenuViewController: OrderViewControllerDelegate {
+  func didFinishOrder(_ viewController: OrderViewController, product: Product, qunatity: Int) {
+    order(product: product, count: UInt(qunatity))
   }
 }

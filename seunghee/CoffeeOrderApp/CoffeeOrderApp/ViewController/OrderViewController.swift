@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol OrderViewControllerDelegate: AnyObject {
+  func didFinishOrder(_ viewController: OrderViewController, product: Product, qunatity: Int)
+}
+
 class OrderViewController: UIViewController {
   
   @IBOutlet weak var imageView: UIImageView!
@@ -14,6 +18,7 @@ class OrderViewController: UIViewController {
   @IBOutlet weak var quantityLabel: UILabel!
   @IBOutlet weak var totalPriceLabel: UILabel!
   
+  weak var delegate: OrderViewControllerDelegate?
   var product: Product?
   var productQuantity: Int = 1 {
     didSet {
@@ -42,7 +47,9 @@ class OrderViewController: UIViewController {
   }
   
   @IBAction func orderButtonDidTap(_ sender: Any) {
+    guard let product = product else { return }
     
+    delegate?.didFinishOrder(self, product: product, qunatity: productQuantity)
     navigationController?.popViewController(animated: true)
   }
 }
