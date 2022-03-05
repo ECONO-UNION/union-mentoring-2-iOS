@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD60ABDB27D341B700147C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60ABDA27D341B700147C4A /* AppDelegate.swift */; };
+		CD60ABDD27D341B700147C4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60ABDC27D341B700147C4A /* SceneDelegate.swift */; };
+		CD60ABDF27D341B700147C4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60ABDE27D341B700147C4A /* ViewController.swift */; };
+		CD60ABE227D341B700147C4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD60ABE027D341B700147C4A /* Main.storyboard */; };
+		CD60ABE427D341B900147C4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD60ABE327D341B900147C4A /* Assets.xcassets */; };
+		CD60ABE727D341B900147C4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD60ABE527D341B900147C4A /* LaunchScreen.storyboard */; };
+		CD60ABF227D341BA00147C4A /* JiwooCafeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60ABF127D341BA00147C4A /* JiwooCafeAppTests.swift */; };
+		CD60ABFC27D341BA00147C4A /* JiwooCafeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60ABFB27D341BA00147C4A /* JiwooCafeAppUITests.swift */; };
+		CD60ABFE27D341BA00147C4A /* JiwooCafeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60ABFD27D341BA00147C4A /* JiwooCafeAppUITestsLaunchTests.swift */; };
+		CD60AC0D27D3425200147C4A /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60AC0C27D3425200147C4A /* Menu.swift */; };
+		CD60AC0F27D3426100147C4A /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60AC0E27D3426100147C4A /* Coffee.swift */; };
+		CD60AC1127D3427300147C4A /* Cake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60AC1027D3427300147C4A /* Cake.swift */; };
+		CD60AC1327D3428100147C4A /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60AC1227D3428100147C4A /* Beverage.swift */; };
+		CD60AC1627D3437000147C4A /* CafeKioskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60AC1527D3437000147C4A /* CafeKioskViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD60ABEE27D341BA00147C4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD60ABCF27D341B700147C4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD60ABD627D341B700147C4A;
+			remoteInfo = JiwooCafeApp;
+		};
+		CD60ABF827D341BA00147C4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD60ABCF27D341B700147C4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD60ABD627D341B700147C4A;
+			remoteInfo = JiwooCafeApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD60ABD727D341B700147C4A /* JiwooCafeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JiwooCafeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD60ABDA27D341B700147C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD60ABDC27D341B700147C4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CD60ABDE27D341B700147C4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD60ABE127D341B700147C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD60ABE327D341B900147C4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD60ABE627D341B900147C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD60ABE827D341B900147C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD60ABED27D341BA00147C4A /* JiwooCafeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JiwooCafeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD60ABF127D341BA00147C4A /* JiwooCafeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiwooCafeAppTests.swift; sourceTree = "<group>"; };
+		CD60ABF727D341BA00147C4A /* JiwooCafeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JiwooCafeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD60ABFB27D341BA00147C4A /* JiwooCafeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiwooCafeAppUITests.swift; sourceTree = "<group>"; };
+		CD60ABFD27D341BA00147C4A /* JiwooCafeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiwooCafeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CD60AC0C27D3425200147C4A /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		CD60AC0E27D3426100147C4A /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		CD60AC1027D3427300147C4A /* Cake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cake.swift; sourceTree = "<group>"; };
+		CD60AC1227D3428100147C4A /* Beverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
+		CD60AC1527D3437000147C4A /* CafeKioskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeKioskViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD60ABD427D341B700147C4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD60ABEA27D341BA00147C4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD60ABF427D341BA00147C4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD60ABCE27D341B700147C4A = {
+			isa = PBXGroup;
+			children = (
+				CD60ABD927D341B700147C4A /* JiwooCafeApp */,
+				CD60ABF027D341BA00147C4A /* JiwooCafeAppTests */,
+				CD60ABFA27D341BA00147C4A /* JiwooCafeAppUITests */,
+				CD60ABD827D341B700147C4A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD60ABD827D341B700147C4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD60ABD727D341B700147C4A /* JiwooCafeApp.app */,
+				CD60ABED27D341BA00147C4A /* JiwooCafeAppTests.xctest */,
+				CD60ABF727D341BA00147C4A /* JiwooCafeAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD60ABD927D341B700147C4A /* JiwooCafeApp */ = {
+			isa = PBXGroup;
+			children = (
+				CD60AC1427D3433900147C4A /* ViewController */,
+				CD60AC0B27D3423E00147C4A /* Model */,
+				CD60ABDA27D341B700147C4A /* AppDelegate.swift */,
+				CD60ABDC27D341B700147C4A /* SceneDelegate.swift */,
+				CD60ABDE27D341B700147C4A /* ViewController.swift */,
+				CD60ABE027D341B700147C4A /* Main.storyboard */,
+				CD60ABE327D341B900147C4A /* Assets.xcassets */,
+				CD60ABE527D341B900147C4A /* LaunchScreen.storyboard */,
+				CD60ABE827D341B900147C4A /* Info.plist */,
+			);
+			path = JiwooCafeApp;
+			sourceTree = "<group>";
+		};
+		CD60ABF027D341BA00147C4A /* JiwooCafeAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD60ABF127D341BA00147C4A /* JiwooCafeAppTests.swift */,
+			);
+			path = JiwooCafeAppTests;
+			sourceTree = "<group>";
+		};
+		CD60ABFA27D341BA00147C4A /* JiwooCafeAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD60ABFB27D341BA00147C4A /* JiwooCafeAppUITests.swift */,
+				CD60ABFD27D341BA00147C4A /* JiwooCafeAppUITestsLaunchTests.swift */,
+			);
+			path = JiwooCafeAppUITests;
+			sourceTree = "<group>";
+		};
+		CD60AC0B27D3423E00147C4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD60AC0C27D3425200147C4A /* Menu.swift */,
+				CD60AC0E27D3426100147C4A /* Coffee.swift */,
+				CD60AC1027D3427300147C4A /* Cake.swift */,
+				CD60AC1227D3428100147C4A /* Beverage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD60AC1427D3433900147C4A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CD60AC1527D3437000147C4A /* CafeKioskViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD60ABD627D341B700147C4A /* JiwooCafeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD60AC0127D341BA00147C4A /* Build configuration list for PBXNativeTarget "JiwooCafeApp" */;
+			buildPhases = (
+				CD60ABD327D341B700147C4A /* Sources */,
+				CD60ABD427D341B700147C4A /* Frameworks */,
+				CD60ABD527D341B700147C4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JiwooCafeApp;
+			productName = JiwooCafeApp;
+			productReference = CD60ABD727D341B700147C4A /* JiwooCafeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD60ABEC27D341BA00147C4A /* JiwooCafeAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD60AC0427D341BA00147C4A /* Build configuration list for PBXNativeTarget "JiwooCafeAppTests" */;
+			buildPhases = (
+				CD60ABE927D341BA00147C4A /* Sources */,
+				CD60ABEA27D341BA00147C4A /* Frameworks */,
+				CD60ABEB27D341BA00147C4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD60ABEF27D341BA00147C4A /* PBXTargetDependency */,
+			);
+			name = JiwooCafeAppTests;
+			productName = JiwooCafeAppTests;
+			productReference = CD60ABED27D341BA00147C4A /* JiwooCafeAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD60ABF627D341BA00147C4A /* JiwooCafeAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD60AC0727D341BA00147C4A /* Build configuration list for PBXNativeTarget "JiwooCafeAppUITests" */;
+			buildPhases = (
+				CD60ABF327D341BA00147C4A /* Sources */,
+				CD60ABF427D341BA00147C4A /* Frameworks */,
+				CD60ABF527D341BA00147C4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD60ABF927D341BA00147C4A /* PBXTargetDependency */,
+			);
+			name = JiwooCafeAppUITests;
+			productName = JiwooCafeAppUITests;
+			productReference = CD60ABF727D341BA00147C4A /* JiwooCafeAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD60ABCF27D341B700147C4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					CD60ABD627D341B700147C4A = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					CD60ABEC27D341BA00147C4A = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = CD60ABD627D341B700147C4A;
+					};
+					CD60ABF627D341BA00147C4A = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = CD60ABD627D341B700147C4A;
+					};
+				};
+			};
+			buildConfigurationList = CD60ABD227D341B700147C4A /* Build configuration list for PBXProject "JiwooCafeApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD60ABCE27D341B700147C4A;
+			productRefGroup = CD60ABD827D341B700147C4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD60ABD627D341B700147C4A /* JiwooCafeApp */,
+				CD60ABEC27D341BA00147C4A /* JiwooCafeAppTests */,
+				CD60ABF627D341BA00147C4A /* JiwooCafeAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD60ABD527D341B700147C4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD60ABE727D341B900147C4A /* LaunchScreen.storyboard in Resources */,
+				CD60ABE427D341B900147C4A /* Assets.xcassets in Resources */,
+				CD60ABE227D341B700147C4A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD60ABEB27D341BA00147C4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD60ABF527D341BA00147C4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD60ABD327D341B700147C4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD60ABDF27D341B700147C4A /* ViewController.swift in Sources */,
+				CD60AC1127D3427300147C4A /* Cake.swift in Sources */,
+				CD60ABDB27D341B700147C4A /* AppDelegate.swift in Sources */,
+				CD60AC0D27D3425200147C4A /* Menu.swift in Sources */,
+				CD60ABDD27D341B700147C4A /* SceneDelegate.swift in Sources */,
+				CD60AC0F27D3426100147C4A /* Coffee.swift in Sources */,
+				CD60AC1327D3428100147C4A /* Beverage.swift in Sources */,
+				CD60AC1627D3437000147C4A /* CafeKioskViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD60ABE927D341BA00147C4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD60ABF227D341BA00147C4A /* JiwooCafeAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD60ABF327D341BA00147C4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD60ABFE27D341BA00147C4A /* JiwooCafeAppUITestsLaunchTests.swift in Sources */,
+				CD60ABFC27D341BA00147C4A /* JiwooCafeAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD60ABEF27D341BA00147C4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD60ABD627D341B700147C4A /* JiwooCafeApp */;
+			targetProxy = CD60ABEE27D341BA00147C4A /* PBXContainerItemProxy */;
+		};
+		CD60ABF927D341BA00147C4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD60ABD627D341B700147C4A /* JiwooCafeApp */;
+			targetProxy = CD60ABF827D341BA00147C4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD60ABE027D341B700147C4A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD60ABE127D341B700147C4A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD60ABE527D341B900147C4A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD60ABE627D341B900147C4A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD60ABFF27D341BA00147C4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD60AC0027D341BA00147C4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD60AC0227D341BA00147C4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JiwooCafeApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.JiwooCafeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD60AC0327D341BA00147C4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JiwooCafeApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.JiwooCafeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD60AC0527D341BA00147C4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.JiwooCafeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JiwooCafeApp.app/JiwooCafeApp";
+			};
+			name = Debug;
+		};
+		CD60AC0627D341BA00147C4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.JiwooCafeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JiwooCafeApp.app/JiwooCafeApp";
+			};
+			name = Release;
+		};
+		CD60AC0827D341BA00147C4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.JiwooCafeAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JiwooCafeApp;
+			};
+			name = Debug;
+		};
+		CD60AC0927D341BA00147C4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.JiwooCafeAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JiwooCafeApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD60ABD227D341B700147C4A /* Build configuration list for PBXProject "JiwooCafeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD60ABFF27D341BA00147C4A /* Debug */,
+				CD60AC0027D341BA00147C4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD60AC0127D341BA00147C4A /* Build configuration list for PBXNativeTarget "JiwooCafeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD60AC0227D341BA00147C4A /* Debug */,
+				CD60AC0327D341BA00147C4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD60AC0427D341BA00147C4A /* Build configuration list for PBXNativeTarget "JiwooCafeAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD60AC0527D341BA00147C4A /* Debug */,
+				CD60AC0627D341BA00147C4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD60AC0727D341BA00147C4A /* Build configuration list for PBXNativeTarget "JiwooCafeAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD60AC0827D341BA00147C4A /* Debug */,
+				CD60AC0927D341BA00147C4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD60ABCF27D341B700147C4A /* Project object */;
+}
