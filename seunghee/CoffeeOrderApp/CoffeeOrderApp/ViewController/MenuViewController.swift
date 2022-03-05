@@ -26,7 +26,10 @@ class MenuViewController: UIViewController {
     menuList.append(StrawberrySmoothi())
     menuList.append(JavachipFrapuccino())
     menuList.append(ChocolateCake())
-    menuList.append(StrawberryCreamCake())
+    
+    if let cake = StrawberryCreamCake(numberOfCandles: 30) {
+      menuList.append(cake)
+    }
   }
 }
 
