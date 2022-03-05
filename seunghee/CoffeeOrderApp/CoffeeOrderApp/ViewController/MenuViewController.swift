@@ -54,8 +54,15 @@ class MenuViewController: UIViewController {
     }
   }
   
-  @IBAction func menuButtonDidTap(_ sender: Any) {
+  @IBAction func menuButtonDidTap(_ button: UIButton) {
+    let index = button.tag - 100
+    guard index < menuList.count else { return }
     
+    let id = String(describing: OrderViewController.self)
+    if let orderVC = storyboard?.instantiateViewController(withIdentifier: id) as? OrderViewController {
+      orderVC.product = menuList[index]
+      navigationController?.pushViewController(orderVC, animated: true)
+    }
   }
 }
 
