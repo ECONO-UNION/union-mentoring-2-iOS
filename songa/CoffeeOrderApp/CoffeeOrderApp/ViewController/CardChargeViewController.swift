@@ -5,7 +5,6 @@
 //  Created by asong on 2022/03/03.
 //
 
-import Foundation
 import UIKit
 
 class CardChargeViewController: UIViewController{
@@ -28,7 +27,7 @@ class CardChargeViewController: UIViewController{
     }
     
     @IBAction func touchChargeButton(_ sender: Any){
-        _ = completionHandler?(money)
+        completionHandler?(money)
         self.dismiss(animated: true, completion: nil)
     }
 }

@@ -5,10 +5,9 @@
 //  Created by asong on 2022/03/03.
 //
 
-import Foundation
 import UIKit
 
-class OrderViewController: UIViewController, OrderDelegate{
+class OrderViewController: UIViewController{
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var orderPriceLabel: UILabel!
@@ -16,33 +15,28 @@ class OrderViewController: UIViewController, OrderDelegate{
     var name: String = ""
     var price: Int = 0
     var money: Int = 0
-    var delegate: OrderDelegate?
-    var completionHandler: ((Int) -> Void)?
+    weak var delegate: OrderDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        delegate = self
         nameLabel.text = name
         orderPriceLabel.text = "\(price)원"
+        money = price
     }
     
     @IBAction func presentStepper(_ sender: UIStepper){
         let quantity = Int(sender.value)
         quantityLabel.text = String(quantity)+"개"
-        delegate?.setPresentOrderPrice(price: quantity * price)
-    }
-    
-    func setPresentOrderPrice(price: Int) {
-        orderPriceLabel.text = "\(price)원"
-        money = price
+        orderPriceLabel.text = "\(quantity * price)원"
+        money = quantity * price
     }
     
     @IBAction func touchOrderButton(){
-        _ = completionHandler?(money)
+        delegate?.sendOrderMoney(money)
         self.navigationController?.popViewController(animated: true)
     }
 }
 
-protocol OrderDelegate {
-    func setPresentOrderPrice(price: Int)
+protocol OrderDelegate: AnyObject {
+    func sendOrderMoney(_ money: Int)
 }

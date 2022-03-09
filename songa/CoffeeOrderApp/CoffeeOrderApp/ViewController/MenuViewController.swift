@@ -5,34 +5,21 @@
 //  Created by asong on 2022/02/24.
 //
 
-import Foundation
 import UIKit
 
 class MenuViewController: UIViewController{
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var cardMoneyLabel: UILabel!
     
-    var card: Card = Card(money: 5000)
+    var card: Card = Card(money: 0)
     var menuList: [Menu] = []
     var favoriteMenu: [Menu] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionView()
-        
-        showMenuList()
         setMenuList()
-        order(menu: HotChoco(whippingCreamAdded: true), quantity: 5)
-        checkOrderAvailableMenu()
-        addFavoriteMenu(menu: VanillaLatte(isHot: false))
-        showFavoriteMenuList()
         cardMoneyLabel.text = "\(card.money)원"
-    }
-    
-    func showMenuList(){
-        print("Coffee - Americano, VanillaLatte")
-        print("Beverage - Frappuccino, HotChoco")
-        print("Cake - StrawberryCake, ChocoCake")
     }
     
     func setMenuList(){
@@ -83,7 +70,8 @@ class MenuViewController: UIViewController{
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "CardChargeVC") as? CardChargeViewController else {
             return
         }
-        vc.completionHandler = { money in
+        vc.completionHandler = { [weak self] money in
+            guard let self = self else{ return }
             self.card.money += money
             self.cardMoneyLabel.text = "\(self.card.money)원"
         }
@@ -119,10 +107,13 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
         vc.name = menuList[indexPath.row].name
         vc.price = menuList[indexPath.row].price
-        vc.completionHandler = { price in
-            self.card.money -= price
-            self.cardMoneyLabel.text = "\(self.card.money)원"
-        }
+        vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+extension MenuViewController: OrderDelegate {
+    func sendOrderMoney(_ money: Int) {
+        self.card.money -= money
+        self.cardMoneyLabel.text = "\(self.card.money)원"
     }
 }
