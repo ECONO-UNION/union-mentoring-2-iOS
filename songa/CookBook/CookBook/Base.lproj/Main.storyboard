@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JKz-GV-v3a">
+                                <rect key="frame" x="44" y="157" width="255" height="429"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mK0-nK-pXZ">
+                                        <rect key="frame" x="8" y="8" width="247" height="368"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mK0-nK-pXZ" firstAttribute="top" secondItem="JKz-GV-v3a" secondAttribute="top" id="CJW-OA-QdN"/>
+                                    <constraint firstItem="mK0-nK-pXZ" firstAttribute="leading" secondItem="JKz-GV-v3a" secondAttribute="leading" id="LL4-wO-UBN"/>
+                                    <constraint firstAttribute="bottom" secondItem="mK0-nK-pXZ" secondAttribute="bottom" id="YKM-UJ-yfy"/>
+                                    <constraint firstAttribute="trailing" secondItem="mK0-nK-pXZ" secondAttribute="trailing" id="eVz-Br-VUX"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="KaA-ip-irh"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="cuJ-cL-s9Z"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U45-E9-ohq">
+                                <rect key="frame" x="166" y="771" width="82" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Item"/>
+                                <connections>
+                                    <action selector="addEntryWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bop-OZ-hzY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U45-E9-ohq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MNM-vO-P3A"/>
+                            <constraint firstItem="U45-E9-ohq" firstAttribute="top" secondItem="JKz-GV-v3a" secondAttribute="bottom" constant="10" id="Phb-oR-0Ka"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="U45-E9-ohq" secondAttribute="bottom" constant="60" id="TjT-wQ-s4i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JKz-GV-v3a" secondAttribute="trailing" id="aOA-2v-I4r"/>
+                            <constraint firstItem="JKz-GV-v3a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="lR5-pe-z1i"/>
+                            <constraint firstItem="JKz-GV-v3a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t0h-PX-2f6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="JKz-GV-v3a" id="Swz-Ex-btm"/>
+                        <outlet property="stackView" destination="mK0-nK-pXZ" id="dhH-tp-6Rr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
