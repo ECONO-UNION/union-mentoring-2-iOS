@@ -22,9 +22,12 @@
 		9CD2763727C7AF6F003017CD /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2763627C7AF6F003017CD /* Beverage.swift */; };
 		9CD2763927C7AFC3003017CD /* Frappuccino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2763827C7AFC3003017CD /* Frappuccino.swift */; };
 		9CD2763B27C7AFE8003017CD /* HotChoco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2763A27C7AFE8003017CD /* HotChoco.swift */; };
-		9CD2763E27C7B080003017CD /* MenuOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2763D27C7B07F003017CD /* MenuOrderViewController.swift */; };
+		9CD2763E27C7B080003017CD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2763D27C7B07F003017CD /* MenuViewController.swift */; };
 		9CD2764027C7B3E1003017CD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2763F27C7B3E1003017CD /* Card.swift */; };
 		9CD2764227C7B4F9003017CD /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2764127C7B4F9003017CD /* Menu.swift */; };
+		9CD2766B27D09BA1003017CD /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2766A27D09BA1003017CD /* OrderViewController.swift */; };
+		9CD2766D27D09C05003017CD /* CardChargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2766C27D09C05003017CD /* CardChargeViewController.swift */; };
+		9CD2767027D0A084003017CD /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2766F27D0A084003017CD /* MenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,9 +48,12 @@
 		9CD2763627C7AF6F003017CD /* Beverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
 		9CD2763827C7AFC3003017CD /* Frappuccino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frappuccino.swift; sourceTree = "<group>"; };
 		9CD2763A27C7AFE8003017CD /* HotChoco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotChoco.swift; sourceTree = "<group>"; };
-		9CD2763D27C7B07F003017CD /* MenuOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOrderViewController.swift; sourceTree = "<group>"; };
+		9CD2763D27C7B07F003017CD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		9CD2763F27C7B3E1003017CD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		9CD2764127C7B4F9003017CD /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		9CD2766A27D09BA1003017CD /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		9CD2766C27D09C05003017CD /* CardChargeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardChargeViewController.swift; sourceTree = "<group>"; };
+		9CD2766F27D0A084003017CD /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 		9CD2760F27C75861003017CD /* CoffeeOrderApp */ = {
 			isa = PBXGroup;
 			children = (
+				9CD2766E27D0A067003017CD /* View */,
 				9CD2763C27C7B06A003017CD /* ViewController */,
 				9CD2762427C7A8EC003017CD /* Model */,
 				9CD2761027C75861003017CD /* AppDelegate.swift */,
@@ -138,9 +145,19 @@
 		9CD2763C27C7B06A003017CD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9CD2763D27C7B07F003017CD /* MenuOrderViewController.swift */,
+				9CD2763D27C7B07F003017CD /* MenuViewController.swift */,
+				9CD2766A27D09BA1003017CD /* OrderViewController.swift */,
+				9CD2766C27D09C05003017CD /* CardChargeViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9CD2766E27D0A067003017CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9CD2766F27D0A084003017CD /* MenuCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,12 +233,14 @@
 			files = (
 				9CD2763B27C7AFE8003017CD /* HotChoco.swift in Sources */,
 				9CD2763727C7AF6F003017CD /* Beverage.swift in Sources */,
+				9CD2767027D0A084003017CD /* MenuCell.swift in Sources */,
 				9CD2763327C7ABC3003017CD /* StrawberryCake.swift in Sources */,
 				9CD2762F27C7AB8F003017CD /* VanillaLatte.swift in Sources */,
 				9CD2763527C7ABED003017CD /* ChocoCake.swift in Sources */,
+				9CD2766D27D09C05003017CD /* CardChargeViewController.swift in Sources */,
 				9CD2761527C75861003017CD /* ViewController.swift in Sources */,
 				9CD2763927C7AFC3003017CD /* Frappuccino.swift in Sources */,
-				9CD2763E27C7B080003017CD /* MenuOrderViewController.swift in Sources */,
+				9CD2763E27C7B080003017CD /* MenuViewController.swift in Sources */,
 				9CD2761127C75861003017CD /* AppDelegate.swift in Sources */,
 				9CD2764227C7B4F9003017CD /* Menu.swift in Sources */,
 				9CD2764027C7B3E1003017CD /* Card.swift in Sources */,
@@ -229,6 +248,7 @@
 				9CD2761327C75861003017CD /* SceneDelegate.swift in Sources */,
 				9CD2762927C7A922003017CD /* Coffee.swift in Sources */,
 				9CD2763127C7ABAF003017CD /* Cake.swift in Sources */,
+				9CD2766B27D09BA1003017CD /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
