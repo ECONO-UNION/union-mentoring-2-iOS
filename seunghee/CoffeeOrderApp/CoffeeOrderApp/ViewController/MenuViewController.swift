@@ -33,7 +33,7 @@ class MenuViewController: UIViewController {
     menuList.append(JavachipFrapuccino())
     menuList.append(ChocolateCake())
     
-    if let cake = StrawberryCreamCake(numberOfCandles: 30) {
+    if let cake = StrawberryCreamCake(numberOfCandles: 130) {
       menuList.append(cake)
     }
   }

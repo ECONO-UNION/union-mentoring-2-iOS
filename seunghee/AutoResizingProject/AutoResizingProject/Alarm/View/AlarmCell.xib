@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlarmCell" rowHeight="100" id="d1O-nQ-Qbe" customClass="AlarmCell" customModule="AutoResizingProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d1O-nQ-Qbe" id="Rla-Uu-sZM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="09:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mZm-Ri-2fz">
+                        <rect key="frame" x="52" y="15" width="268" height="48"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알람" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfb-9N-Sqs">
+                        <rect key="frame" x="0.0" y="65" width="345" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="faQ-jS-Pno">
+                        <rect key="frame" x="360" y="32" width="51" height="31"/>
+                        <connections>
+                            <action selector="switchValueChanged:" destination="d1O-nQ-Qbe" eventType="valueChanged" id="GzI-Km-nof"/>
+                        </connections>
+                    </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GE-Gr-79i">
+                        <rect key="frame" x="0.0" y="24" width="52" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0GE-Gr-79i" firstAttribute="bottom" secondItem="mZm-Ri-2fz" secondAttribute="bottom" constant="-3" id="FOU-jW-g4N"/>
+                    <constraint firstItem="faQ-jS-Pno" firstAttribute="leading" secondItem="mZm-Ri-2fz" secondAttribute="trailing" priority="750" constant="40" id="LNm-ky-UXP"/>
+                    <constraint firstItem="lfb-9N-Sqs" firstAttribute="leading" secondItem="0GE-Gr-79i" secondAttribute="leading" id="Ru7-0i-dfv"/>
+                    <constraint firstItem="mZm-Ri-2fz" firstAttribute="top" secondItem="Rla-Uu-sZM" secondAttribute="top" constant="15" id="Ryh-ZH-IIe"/>
+                    <constraint firstItem="faQ-jS-Pno" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mZm-Ri-2fz" secondAttribute="trailing" constant="20" id="Vud-Tg-ztn"/>
+                    <constraint firstAttribute="bottom" secondItem="lfb-9N-Sqs" secondAttribute="bottom" constant="15" id="WF5-Fs-iqP"/>
+                    <constraint firstItem="faQ-jS-Pno" firstAttribute="centerY" secondItem="Rla-Uu-sZM" secondAttribute="centerY" constant="-1.5" id="cTK-62-bsY"/>
+                    <constraint firstItem="mZm-Ri-2fz" firstAttribute="leading" secondItem="0GE-Gr-79i" secondAttribute="trailing" id="lcj-6l-b44"/>
+                    <constraint firstItem="lfb-9N-Sqs" firstAttribute="top" secondItem="0GE-Gr-79i" secondAttribute="bottom" constant="5" id="sPv-UG-GBS"/>
+                    <constraint firstItem="faQ-jS-Pno" firstAttribute="leading" secondItem="lfb-9N-Sqs" secondAttribute="trailing" constant="15" id="syA-Yn-Eq7"/>
+                    <constraint firstItem="0GE-Gr-79i" firstAttribute="leading" secondItem="Rla-Uu-sZM" secondAttribute="leading" id="up0-RB-Fdw"/>
+                    <constraint firstAttribute="trailing" secondItem="faQ-jS-Pno" secondAttribute="trailing" constant="5" id="xy7-XP-cEe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="alarmSwitch" destination="faQ-jS-Pno" id="dxk-W3-ar9"/>
+                <outlet property="descriptionLabel" destination="lfb-9N-Sqs" id="lXh-tF-TTQ"/>
+                <outlet property="isAMLabel" destination="0GE-Gr-79i" id="jZn-hN-tTZ"/>
+                <outlet property="timeLabel" destination="mZm-Ri-2fz" id="DZH-wZ-gX2"/>
+            </connections>
+            <point key="canvasLocation" x="169.56521739130437" y="-32.8125"/>
+        </tableViewCell>
+    </objects>
+</document>
