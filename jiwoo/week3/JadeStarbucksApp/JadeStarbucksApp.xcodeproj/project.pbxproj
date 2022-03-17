@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD3636CE27E3193000C699F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3636CD27E3193000C699F3 /* AppDelegate.swift */; };
+		CD3636D027E3193000C699F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3636CF27E3193000C699F3 /* SceneDelegate.swift */; };
+		CD3636D227E3193000C699F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3636D127E3193000C699F3 /* ViewController.swift */; };
+		CD3636D527E3193000C699F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3636D327E3193000C699F3 /* Main.storyboard */; };
+		CD3636D727E3193100C699F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3636D627E3193100C699F3 /* Assets.xcassets */; };
+		CD3636DA27E3193100C699F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3636D827E3193100C699F3 /* LaunchScreen.storyboard */; };
+		CD3636E527E3193100C699F3 /* JadeStarbucksAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3636E427E3193100C699F3 /* JadeStarbucksAppTests.swift */; };
+		CD3636EF27E3193100C699F3 /* JadeStarbucksAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3636EE27E3193100C699F3 /* JadeStarbucksAppUITests.swift */; };
+		CD3636F127E3193100C699F3 /* JadeStarbucksAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3636F027E3193100C699F3 /* JadeStarbucksAppUITestsLaunchTests.swift */; };
+		CD3636FE27E325AC00C699F3 /* JadeStarbucksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3636FD27E325AC00C699F3 /* JadeStarbucksViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD3636E127E3193100C699F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD3636C227E3192F00C699F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD3636C927E3193000C699F3;
+			remoteInfo = JadeStarbucksApp;
+		};
+		CD3636EB27E3193100C699F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD3636C227E3192F00C699F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD3636C927E3193000C699F3;
+			remoteInfo = JadeStarbucksApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD3636CA27E3193000C699F3 /* JadeStarbucksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JadeStarbucksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3636CD27E3193000C699F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD3636CF27E3193000C699F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CD3636D127E3193000C699F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD3636D427E3193000C699F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD3636D627E3193100C699F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD3636D927E3193100C699F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD3636DB27E3193100C699F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD3636E027E3193100C699F3 /* JadeStarbucksAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JadeStarbucksAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3636E427E3193100C699F3 /* JadeStarbucksAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JadeStarbucksAppTests.swift; sourceTree = "<group>"; };
+		CD3636EA27E3193100C699F3 /* JadeStarbucksAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JadeStarbucksAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3636EE27E3193100C699F3 /* JadeStarbucksAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JadeStarbucksAppUITests.swift; sourceTree = "<group>"; };
+		CD3636F027E3193100C699F3 /* JadeStarbucksAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JadeStarbucksAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CD3636FD27E325AC00C699F3 /* JadeStarbucksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JadeStarbucksViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD3636C727E3193000C699F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD3636DD27E3193100C699F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD3636E727E3193100C699F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD3636C127E3192F00C699F3 = {
+			isa = PBXGroup;
+			children = (
+				CD3636CC27E3193000C699F3 /* JadeStarbucksApp */,
+				CD3636E327E3193100C699F3 /* JadeStarbucksAppTests */,
+				CD3636ED27E3193100C699F3 /* JadeStarbucksAppUITests */,
+				CD3636CB27E3193000C699F3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD3636CB27E3193000C699F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD3636CA27E3193000C699F3 /* JadeStarbucksApp.app */,
+				CD3636E027E3193100C699F3 /* JadeStarbucksAppTests.xctest */,
+				CD3636EA27E3193100C699F3 /* JadeStarbucksAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD3636CC27E3193000C699F3 /* JadeStarbucksApp */ = {
+			isa = PBXGroup;
+			children = (
+				CD3636CD27E3193000C699F3 /* AppDelegate.swift */,
+				CD3636CF27E3193000C699F3 /* SceneDelegate.swift */,
+				CD3636FD27E325AC00C699F3 /* JadeStarbucksViewController.swift */,
+				CD3636D127E3193000C699F3 /* ViewController.swift */,
+				CD3636D327E3193000C699F3 /* Main.storyboard */,
+				CD3636D627E3193100C699F3 /* Assets.xcassets */,
+				CD3636D827E3193100C699F3 /* LaunchScreen.storyboard */,
+				CD3636DB27E3193100C699F3 /* Info.plist */,
+			);
+			path = JadeStarbucksApp;
+			sourceTree = "<group>";
+		};
+		CD3636E327E3193100C699F3 /* JadeStarbucksAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD3636E427E3193100C699F3 /* JadeStarbucksAppTests.swift */,
+			);
+			path = JadeStarbucksAppTests;
+			sourceTree = "<group>";
+		};
+		CD3636ED27E3193100C699F3 /* JadeStarbucksAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD3636EE27E3193100C699F3 /* JadeStarbucksAppUITests.swift */,
+				CD3636F027E3193100C699F3 /* JadeStarbucksAppUITestsLaunchTests.swift */,
+			);
+			path = JadeStarbucksAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD3636C927E3193000C699F3 /* JadeStarbucksApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD3636F427E3193100C699F3 /* Build configuration list for PBXNativeTarget "JadeStarbucksApp" */;
+			buildPhases = (
+				CD3636C627E3193000C699F3 /* Sources */,
+				CD3636C727E3193000C699F3 /* Frameworks */,
+				CD3636C827E3193000C699F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JadeStarbucksApp;
+			productName = JadeStarbucksApp;
+			productReference = CD3636CA27E3193000C699F3 /* JadeStarbucksApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD3636DF27E3193100C699F3 /* JadeStarbucksAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD3636F727E3193100C699F3 /* Build configuration list for PBXNativeTarget "JadeStarbucksAppTests" */;
+			buildPhases = (
+				CD3636DC27E3193100C699F3 /* Sources */,
+				CD3636DD27E3193100C699F3 /* Frameworks */,
+				CD3636DE27E3193100C699F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD3636E227E3193100C699F3 /* PBXTargetDependency */,
+			);
+			name = JadeStarbucksAppTests;
+			productName = JadeStarbucksAppTests;
+			productReference = CD3636E027E3193100C699F3 /* JadeStarbucksAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD3636E927E3193100C699F3 /* JadeStarbucksAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD3636FA27E3193100C699F3 /* Build configuration list for PBXNativeTarget "JadeStarbucksAppUITests" */;
+			buildPhases = (
+				CD3636E627E3193100C699F3 /* Sources */,
+				CD3636E727E3193100C699F3 /* Frameworks */,
+				CD3636E827E3193100C699F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD3636EC27E3193100C699F3 /* PBXTargetDependency */,
+			);
+			name = JadeStarbucksAppUITests;
+			productName = JadeStarbucksAppUITests;
+			productReference = CD3636EA27E3193100C699F3 /* JadeStarbucksAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD3636C227E3192F00C699F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					CD3636C927E3193000C699F3 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					CD3636DF27E3193100C699F3 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = CD3636C927E3193000C699F3;
+					};
+					CD3636E927E3193100C699F3 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = CD3636C927E3193000C699F3;
+					};
+				};
+			};
+			buildConfigurationList = CD3636C527E3192F00C699F3 /* Build configuration list for PBXProject "JadeStarbucksApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD3636C127E3192F00C699F3;
+			productRefGroup = CD3636CB27E3193000C699F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD3636C927E3193000C699F3 /* JadeStarbucksApp */,
+				CD3636DF27E3193100C699F3 /* JadeStarbucksAppTests */,
+				CD3636E927E3193100C699F3 /* JadeStarbucksAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD3636C827E3193000C699F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD3636DA27E3193100C699F3 /* LaunchScreen.storyboard in Resources */,
+				CD3636D727E3193100C699F3 /* Assets.xcassets in Resources */,
+				CD3636D527E3193000C699F3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD3636DE27E3193100C699F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD3636E827E3193100C699F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD3636C627E3193000C699F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD3636D227E3193000C699F3 /* ViewController.swift in Sources */,
+				CD3636CE27E3193000C699F3 /* AppDelegate.swift in Sources */,
+				CD3636D027E3193000C699F3 /* SceneDelegate.swift in Sources */,
+				CD3636FE27E325AC00C699F3 /* JadeStarbucksViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD3636DC27E3193100C699F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD3636E527E3193100C699F3 /* JadeStarbucksAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD3636E627E3193100C699F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD3636EF27E3193100C699F3 /* JadeStarbucksAppUITests.swift in Sources */,
+				CD3636F127E3193100C699F3 /* JadeStarbucksAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD3636E227E3193100C699F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD3636C927E3193000C699F3 /* JadeStarbucksApp */;
+			targetProxy = CD3636E127E3193100C699F3 /* PBXContainerItemProxy */;
+		};
+		CD3636EC27E3193100C699F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD3636C927E3193000C699F3 /* JadeStarbucksApp */;
+			targetProxy = CD3636EB27E3193100C699F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD3636D327E3193000C699F3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD3636D427E3193000C699F3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD3636D827E3193100C699F3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD3636D927E3193100C699F3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD3636F227E3193100C699F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD3636F327E3193100C699F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD3636F527E3193100C699F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JadeStarbucksApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.JadeStarbucksApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD3636F627E3193100C699F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JadeStarbucksApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.JadeStarbucksApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD3636F827E3193100C699F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.JadeStarbucksAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JadeStarbucksApp.app/JadeStarbucksApp";
+			};
+			name = Debug;
+		};
+		CD3636F927E3193100C699F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.JadeStarbucksAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JadeStarbucksApp.app/JadeStarbucksApp";
+			};
+			name = Release;
+		};
+		CD3636FB27E3193100C699F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.JadeStarbucksAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JadeStarbucksApp;
+			};
+			name = Debug;
+		};
+		CD3636FC27E3193100C699F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.JadeStarbucksAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JadeStarbucksApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD3636C527E3192F00C699F3 /* Build configuration list for PBXProject "JadeStarbucksApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD3636F227E3193100C699F3 /* Debug */,
+				CD3636F327E3193100C699F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD3636F427E3193100C699F3 /* Build configuration list for PBXNativeTarget "JadeStarbucksApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD3636F527E3193100C699F3 /* Debug */,
+				CD3636F627E3193100C699F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD3636F727E3193100C699F3 /* Build configuration list for PBXNativeTarget "JadeStarbucksAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD3636F827E3193100C699F3 /* Debug */,
+				CD3636F927E3193100C699F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD3636FA27E3193100C699F3 /* Build configuration list for PBXNativeTarget "JadeStarbucksAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD3636FB27E3193100C699F3 /* Debug */,
+				CD3636FC27E3193100C699F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD3636C227E3192F00C699F3 /* Project object */;
+}
