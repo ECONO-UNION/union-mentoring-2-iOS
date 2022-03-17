@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD36374C27E3910600C699F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36374B27E3910600C699F3 /* AppDelegate.swift */; };
+		CD36374E27E3910600C699F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36374D27E3910600C699F3 /* SceneDelegate.swift */; };
+		CD36375327E3910600C699F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD36375127E3910600C699F3 /* Main.storyboard */; };
+		CD36375527E3910800C699F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD36375427E3910800C699F3 /* Assets.xcassets */; };
+		CD36375827E3910800C699F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD36375627E3910800C699F3 /* LaunchScreen.storyboard */; };
+		CD36376327E3910900C699F3 /* jadeAlarmAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36376227E3910900C699F3 /* jadeAlarmAppTests.swift */; };
+		CD36376D27E3910900C699F3 /* jadeAlarmAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36376C27E3910900C699F3 /* jadeAlarmAppUITests.swift */; };
+		CD36376F27E3910900C699F3 /* jadeAlarmAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36376E27E3910900C699F3 /* jadeAlarmAppUITestsLaunchTests.swift */; };
+		CD36377C27E3912A00C699F3 /* alarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36377B27E3912900C699F3 /* alarmModel.swift */; };
+		CD36378027E392DD00C699F3 /* alarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36377F27E392DD00C699F3 /* alarmVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD36375F27E3910900C699F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD36374027E3910600C699F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD36374727E3910600C699F3;
+			remoteInfo = jadeAlarmApp;
+		};
+		CD36376927E3910900C699F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD36374027E3910600C699F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD36374727E3910600C699F3;
+			remoteInfo = jadeAlarmApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD36374827E3910600C699F3 /* jadeAlarmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jadeAlarmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD36374B27E3910600C699F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD36374D27E3910600C699F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CD36375227E3910600C699F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD36375427E3910800C699F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD36375727E3910800C699F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD36375927E3910800C699F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD36375E27E3910900C699F3 /* jadeAlarmAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jadeAlarmAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD36376227E3910900C699F3 /* jadeAlarmAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jadeAlarmAppTests.swift; sourceTree = "<group>"; };
+		CD36376827E3910900C699F3 /* jadeAlarmAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jadeAlarmAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD36376C27E3910900C699F3 /* jadeAlarmAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jadeAlarmAppUITests.swift; sourceTree = "<group>"; };
+		CD36376E27E3910900C699F3 /* jadeAlarmAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jadeAlarmAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CD36377B27E3912900C699F3 /* alarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmModel.swift; sourceTree = "<group>"; };
+		CD36377F27E392DD00C699F3 /* alarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD36374527E3910600C699F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD36375B27E3910900C699F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD36376527E3910900C699F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD36373F27E3910600C699F3 = {
+			isa = PBXGroup;
+			children = (
+				CD36374A27E3910600C699F3 /* jadeAlarmApp */,
+				CD36376127E3910900C699F3 /* jadeAlarmAppTests */,
+				CD36376B27E3910900C699F3 /* jadeAlarmAppUITests */,
+				CD36374927E3910600C699F3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD36374927E3910600C699F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD36374827E3910600C699F3 /* jadeAlarmApp.app */,
+				CD36375E27E3910900C699F3 /* jadeAlarmAppTests.xctest */,
+				CD36376827E3910900C699F3 /* jadeAlarmAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD36374A27E3910600C699F3 /* jadeAlarmApp */ = {
+			isa = PBXGroup;
+			children = (
+				CD36377E27E3928800C699F3 /* ViewController */,
+				CD36377D27E3913000C699F3 /* Model */,
+				CD36374B27E3910600C699F3 /* AppDelegate.swift */,
+				CD36374D27E3910600C699F3 /* SceneDelegate.swift */,
+				CD36375127E3910600C699F3 /* Main.storyboard */,
+				CD36375427E3910800C699F3 /* Assets.xcassets */,
+				CD36375627E3910800C699F3 /* LaunchScreen.storyboard */,
+				CD36375927E3910800C699F3 /* Info.plist */,
+			);
+			path = jadeAlarmApp;
+			sourceTree = "<group>";
+		};
+		CD36376127E3910900C699F3 /* jadeAlarmAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD36376227E3910900C699F3 /* jadeAlarmAppTests.swift */,
+			);
+			path = jadeAlarmAppTests;
+			sourceTree = "<group>";
+		};
+		CD36376B27E3910900C699F3 /* jadeAlarmAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD36376C27E3910900C699F3 /* jadeAlarmAppUITests.swift */,
+				CD36376E27E3910900C699F3 /* jadeAlarmAppUITestsLaunchTests.swift */,
+			);
+			path = jadeAlarmAppUITests;
+			sourceTree = "<group>";
+		};
+		CD36377D27E3913000C699F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD36377B27E3912900C699F3 /* alarmModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD36377E27E3928800C699F3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CD36377F27E392DD00C699F3 /* alarmVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD36374727E3910600C699F3 /* jadeAlarmApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD36377227E3910900C699F3 /* Build configuration list for PBXNativeTarget "jadeAlarmApp" */;
+			buildPhases = (
+				CD36374427E3910600C699F3 /* Sources */,
+				CD36374527E3910600C699F3 /* Frameworks */,
+				CD36374627E3910600C699F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = jadeAlarmApp;
+			productName = jadeAlarmApp;
+			productReference = CD36374827E3910600C699F3 /* jadeAlarmApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD36375D27E3910900C699F3 /* jadeAlarmAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD36377527E3910900C699F3 /* Build configuration list for PBXNativeTarget "jadeAlarmAppTests" */;
+			buildPhases = (
+				CD36375A27E3910900C699F3 /* Sources */,
+				CD36375B27E3910900C699F3 /* Frameworks */,
+				CD36375C27E3910900C699F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD36376027E3910900C699F3 /* PBXTargetDependency */,
+			);
+			name = jadeAlarmAppTests;
+			productName = jadeAlarmAppTests;
+			productReference = CD36375E27E3910900C699F3 /* jadeAlarmAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD36376727E3910900C699F3 /* jadeAlarmAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD36377827E3910900C699F3 /* Build configuration list for PBXNativeTarget "jadeAlarmAppUITests" */;
+			buildPhases = (
+				CD36376427E3910900C699F3 /* Sources */,
+				CD36376527E3910900C699F3 /* Frameworks */,
+				CD36376627E3910900C699F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD36376A27E3910900C699F3 /* PBXTargetDependency */,
+			);
+			name = jadeAlarmAppUITests;
+			productName = jadeAlarmAppUITests;
+			productReference = CD36376827E3910900C699F3 /* jadeAlarmAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD36374027E3910600C699F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					CD36374727E3910600C699F3 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					CD36375D27E3910900C699F3 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = CD36374727E3910600C699F3;
+					};
+					CD36376727E3910900C699F3 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = CD36374727E3910600C699F3;
+					};
+				};
+			};
+			buildConfigurationList = CD36374327E3910600C699F3 /* Build configuration list for PBXProject "jadeAlarmApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD36373F27E3910600C699F3;
+			productRefGroup = CD36374927E3910600C699F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD36374727E3910600C699F3 /* jadeAlarmApp */,
+				CD36375D27E3910900C699F3 /* jadeAlarmAppTests */,
+				CD36376727E3910900C699F3 /* jadeAlarmAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD36374627E3910600C699F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD36375827E3910800C699F3 /* LaunchScreen.storyboard in Resources */,
+				CD36375527E3910800C699F3 /* Assets.xcassets in Resources */,
+				CD36375327E3910600C699F3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD36375C27E3910900C699F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD36376627E3910900C699F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD36374427E3910600C699F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD36377C27E3912A00C699F3 /* alarmModel.swift in Sources */,
+				CD36374C27E3910600C699F3 /* AppDelegate.swift in Sources */,
+				CD36378027E392DD00C699F3 /* alarmVC.swift in Sources */,
+				CD36374E27E3910600C699F3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD36375A27E3910900C699F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD36376327E3910900C699F3 /* jadeAlarmAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD36376427E3910900C699F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD36376F27E3910900C699F3 /* jadeAlarmAppUITestsLaunchTests.swift in Sources */,
+				CD36376D27E3910900C699F3 /* jadeAlarmAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD36376027E3910900C699F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD36374727E3910600C699F3 /* jadeAlarmApp */;
+			targetProxy = CD36375F27E3910900C699F3 /* PBXContainerItemProxy */;
+		};
+		CD36376A27E3910900C699F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD36374727E3910600C699F3 /* jadeAlarmApp */;
+			targetProxy = CD36376927E3910900C699F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD36375127E3910600C699F3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD36375227E3910600C699F3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD36375627E3910800C699F3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD36375727E3910800C699F3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD36377027E3910900C699F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD36377127E3910900C699F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD36377327E3910900C699F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = jadeAlarmApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.jadeAlarmApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD36377427E3910900C699F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = jadeAlarmApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.jadeAlarmApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD36377627E3910900C699F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.jadeAlarmAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jadeAlarmApp.app/jadeAlarmApp";
+			};
+			name = Debug;
+		};
+		CD36377727E3910900C699F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.jadeAlarmAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jadeAlarmApp.app/jadeAlarmApp";
+			};
+			name = Release;
+		};
+		CD36377927E3910900C699F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.jadeAlarmAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = jadeAlarmApp;
+			};
+			name = Debug;
+		};
+		CD36377A27E3910900C699F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G8XX337GMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jade.jadeAlarmAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = jadeAlarmApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD36374327E3910600C699F3 /* Build configuration list for PBXProject "jadeAlarmApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD36377027E3910900C699F3 /* Debug */,
+				CD36377127E3910900C699F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD36377227E3910900C699F3 /* Build configuration list for PBXNativeTarget "jadeAlarmApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD36377327E3910900C699F3 /* Debug */,
+				CD36377427E3910900C699F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD36377527E3910900C699F3 /* Build configuration list for PBXNativeTarget "jadeAlarmAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD36377627E3910900C699F3 /* Debug */,
+				CD36377727E3910900C699F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD36377827E3910900C699F3 /* Build configuration list for PBXNativeTarget "jadeAlarmAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD36377927E3910900C699F3 /* Debug */,
+				CD36377A27E3910900C699F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD36374027E3910600C699F3 /* Project object */;
+}
