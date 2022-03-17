@@ -15,7 +15,6 @@
 		F70927C9273A99460034374B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F70927C7273A99460034374B /* LaunchScreen.storyboard */; };
 		F70927D4273A99460034374B /* AutoLaoyoutProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70927D3273A99460034374B /* AutoLaoyoutProjectTests.swift */; };
 		F70927DF273A99460034374B /* AutoLaoyoutProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70927DE273A99460034374B /* AutoLaoyoutProjectUITests.swift */; };
-		F70927ED274291F20034374B /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70927EC274291F20034374B /* MyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		F70927DA273A99460034374B /* AutoLaoyoutProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoLaoyoutProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70927DE273A99460034374B /* AutoLaoyoutProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLaoyoutProjectUITests.swift; sourceTree = "<group>"; };
 		F70927E0273A99460034374B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F70927EC274291F20034374B /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +106,6 @@
 				F70927C5273A99460034374B /* Assets.xcassets */,
 				F70927C7273A99460034374B /* LaunchScreen.storyboard */,
 				F70927CA273A99460034374B /* Info.plist */,
-				F70927EC274291F20034374B /* MyView.swift */,
 			);
 			path = AutoLaoyoutProject;
 			sourceTree = "<group>";
@@ -261,7 +258,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F70927ED274291F20034374B /* MyView.swift in Sources */,
 				F70927C1273A99450034374B /* ViewController.swift in Sources */,
 				F70927BD273A99450034374B /* AppDelegate.swift in Sources */,
 				F70927BF273A99450034374B /* SceneDelegate.swift in Sources */,

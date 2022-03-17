@@ -11,11 +11,8 @@ class ViewController: UIViewController {
 
   @IBOutlet var buttons: [UIButton]!
 
-  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
-    print("뭐임요")
     
     for button in buttons {
       button.titleLabel?.font = UIFont.systemFont(ofSize: 13)
