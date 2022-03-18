@@ -14,9 +14,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableView.estimatedRowHeight = 70
-        //tableView.rowHeight = UITableView.automaticDimension
-        // Do any additional setup after loading the view.
     }
 }
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
@@ -56,20 +53,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return height
     }
     
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        guard let header = view as? UITableViewHeaderFooterView else { return }
-        
-        let view: UIView = {
-            let v = UIView()
-            v.backgroundColor = .black
-            
-            return v
-        }()
-        
-        header.textLabel?.textAlignment = .left
-        header.textLabel?.text = "알람"
-        header.textLabel?.textColor = .white
-        header.backgroundView = view
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "알람"
     }
 }
-
