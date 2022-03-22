@@ -52,10 +52,6 @@ extension AlarmViewController: UITableViewDataSource, UITableViewDelegate {
     return cell
   }
   
-//  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//    return "기타"
-//  }
-  
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let view = UIView()
     let titleLabel = UILabel()
