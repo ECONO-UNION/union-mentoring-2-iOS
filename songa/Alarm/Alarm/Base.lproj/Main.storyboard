@@ -40,30 +40,30 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zIS-OE-DJH">
-                                                    <rect key="frame" x="303" y="31" width="51" height="31"/>
+                                                    <rect key="frame" x="285" y="31" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="switchValueChanged:" destination="rLp-SD-5Su" eventType="touchUpInside" id="mer-ug-BRb"/>
                                                     </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHe-Qj-pB3">
-                                                    <rect key="frame" x="20" y="61.5" width="263" height="13.5"/>
+                                                    <rect key="frame" x="20" y="61.5" width="264" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="zIS-OE-DJH" secondAttribute="trailing" constant="22" id="4gK-gU-oEt"/>
                                                 <constraint firstItem="Y7L-Qx-jKf" firstAttribute="top" secondItem="tYz-Vr-Z0t" secondAttribute="top" constant="10" id="4k9-Ci-H2I"/>
                                                 <constraint firstItem="FMs-3k-g2T" firstAttribute="leading" secondItem="tYz-Vr-Z0t" secondAttribute="leading" constant="20" id="BQX-lE-AsK"/>
                                                 <constraint firstItem="zIS-OE-DJH" firstAttribute="centerY" secondItem="tYz-Vr-Z0t" secondAttribute="centerY" id="EMq-rS-xnX"/>
                                                 <constraint firstItem="tHe-Qj-pB3" firstAttribute="top" secondItem="Y7L-Qx-jKf" secondAttribute="bottom" constant="13" id="Sqc-zP-LHX"/>
-                                                <constraint firstItem="zIS-OE-DJH" firstAttribute="leading" secondItem="tHe-Qj-pB3" secondAttribute="trailing" constant="20" id="Tju-hH-caH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zIS-OE-DJH" secondAttribute="trailing" constant="20" id="Tp2-6H-KfR"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="tHe-Qj-pB3" secondAttribute="bottom" constant="7" id="aAO-U2-bq6"/>
                                                 <constraint firstItem="FMs-3k-g2T" firstAttribute="top" secondItem="tYz-Vr-Z0t" secondAttribute="top" constant="7" id="krP-5t-xSE"/>
                                                 <constraint firstItem="tHe-Qj-pB3" firstAttribute="leading" secondItem="tYz-Vr-Z0t" secondAttribute="leadingMargin" id="nCK-nP-FKp"/>
                                                 <constraint firstItem="tHe-Qj-pB3" firstAttribute="top" secondItem="FMs-3k-g2T" secondAttribute="bottom" constant="5" id="p2c-RE-VFz"/>
                                                 <constraint firstItem="Y7L-Qx-jKf" firstAttribute="leading" secondItem="FMs-3k-g2T" secondAttribute="trailing" constant="20" id="vUQ-9f-Gf3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tHe-Qj-pB3" secondAttribute="trailing" constant="70" id="voD-fk-7sa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="labelColor"/>

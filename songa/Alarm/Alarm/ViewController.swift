@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    let data: [AlarmModel] = [AlarmModel(isAm: true, time: "2:00", isOn: true, content: "알람"), AlarmModel(isAm: true, time: "2:00", isOn: true, content: "알람"), AlarmModel(isAm: true, time: "3:50", isOn: true, content: "알람이다. 일어나~~~~~~~~~~~~~ 알람이다. 일어나~~~~~~~~~~~~~ 알람이다. 일어나~~~~~~~~~~~~~ 알람이다. 일어나~~~~~~~~~~~~~"), AlarmModel(isAm: false, time: "12:00", isOn: true, content: "알람~~~~~~~~~~~~"), AlarmModel(isAm: false, time: "8:23", isOn: false, content: "알람")]
+    let data: [AlarmModel] = [AlarmModel(isAm: true, time: "2:00", isOn: true, content: "알람"), AlarmModel(isAm: true, time: "2:00", isOn: true, content: "알람"), AlarmModel(isAm: true, time: "3:50", isOn: true, content: "알람이다. 일어나~~~~~~~~~~~~~ 알람이다. 일어나~~~~~~~~~~~~~ 알람이다. 일어나~~~~~~~~~~~~~ 알람이다. 일어나~~~~~~~~~~~~~ 알람이다. 일어나~~~~~~~~~~~~~ 알람이다. 일어나~~~~~~~~~~~~~ 알람이다. 일어나~~~~~~~~~~~~~ 알람이다. 일어나~~~~~~~~~~~~~"), AlarmModel(isAm: false, time: "12:00", isOn: true, content: "알람~~~~~~~~~~~~"), AlarmModel(isAm: false, time: "8:23", isOn: false, content: "알람")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,11 +48,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let text = data[indexPath.row].content
-        let height = CGFloat( 100 + (text.count)/30 * 10)
-        return height
+        //let text = data[indexPath.row].content
+        // let height = CGFloat( 100 + (text.count)/30 * 10)
+        // return height
+        return UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "알람"
