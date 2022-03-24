@@ -48,9 +48,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //let text = data[indexPath.row].content
-        // let height = CGFloat( 100 + (text.count)/30 * 10)
-        // return height
         return UITableView.automaticDimension
     }
     
