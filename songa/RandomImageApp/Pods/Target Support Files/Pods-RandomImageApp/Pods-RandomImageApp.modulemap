@@ -1,0 +1,6 @@
+framework module Pods_RandomImageApp {
+  umbrella header "Pods-RandomImageApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
