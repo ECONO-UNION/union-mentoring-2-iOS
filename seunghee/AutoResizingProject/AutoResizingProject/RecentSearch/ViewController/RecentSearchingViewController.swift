@@ -17,7 +17,7 @@ class RecentSearchingViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-   
+   1ㅂㅈㄷ3ㄱ4ㅅ5  1₩ㅂㅈㄷㄱㅅ5ㅛㅕ7ㅑ8ㅐ9ㅔ0[=]1₩34
     configureView()
   }
   
