@@ -1,0 +1,6 @@
+module Pods_ImageCachingProject {
+  umbrella header "Pods-ImageCachingProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
