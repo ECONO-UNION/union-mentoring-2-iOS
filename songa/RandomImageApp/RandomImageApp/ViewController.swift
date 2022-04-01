@@ -34,19 +34,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
      }
 }
 extension UIImageView{
-    func setImageWithUrl(_ url: String, _ index: Int){
-        let cacheKey = NSString(string: String(index))
+    func setImageWithUrl(_ url: String, _ cacheKeyNumber: Int){
+        let cacheKey = NSString(string: String(cacheKeyNumber))
         if let cachedImage = ImageCacheManager.shared.object(forKey: cacheKey){
             self.image = cachedImage
             return
         }
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .userInitiated).async {
             if let url = URL(string: url) {
-                URLSession.shared.dataTask(with: url) { (data, res, err) in
-                    if let _ = err {
-                        DispatchQueue.main.async {
-                            self.image = UIImage()
-                        }
+                URLSession.shared.dataTask(with: url) { (data, response, error) in
+                    if let _ = error {
+                        print("url image download error happened")
                         return
                     }
                     DispatchQueue.main.async {
