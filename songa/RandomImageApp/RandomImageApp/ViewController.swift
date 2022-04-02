@@ -45,6 +45,9 @@ extension UIImageView{
                 URLSession.shared.dataTask(with: url) { (data, response, error) in
                     if let _ = error {
                         print("url image download error happened")
+                        DispatchQueue.main.async {
+                            self.image = UIImage(named: "default")
+                        }
                         return
                     }
                     DispatchQueue.main.async {
