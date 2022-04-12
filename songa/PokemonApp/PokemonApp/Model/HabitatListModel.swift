@@ -6,12 +6,14 @@
 //
 
 import Foundation
-struct HabitatListModel{
+
+struct HabitatListModel: Decodable{
     let id: Int
     let name: String
     let pokemon_species: [PokemonSpecies]
 }
-struct PokemonSpecies{
+
+struct PokemonSpecies: Decodable{
     let name: String
     let url: String
 }
