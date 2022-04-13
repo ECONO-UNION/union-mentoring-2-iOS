@@ -10,22 +10,23 @@ import UIKit
 class HabitatsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var tableData: [String] = []
-    var pokemonData: [PokemonSpecies] = []
-
+    var habitatDataList: [String] = []
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        getHabitatListData()
+        for i in 1..<10{
+            getHabitatListData(id: String(i))
+        }
     }
 }
 extension HabitatsViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return habitatDataList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HabitatListTableViewCell", for: indexPath) as? HabitatListTableViewCell else{ return UITableViewCell() }
-        cell.habitatNameLabel.text = tableData[indexPath.row]
+        cell.habitatNameLabel.text = habitatDataList[indexPath.row]
         return cell
     }
     
@@ -34,7 +35,7 @@ extension HabitatsViewController: UITableViewDelegate, UITableViewDataSource{
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "HabitatPokemonViewController") as? HabitatPokemonViewController else {
             return
         }
-        vc.data = pokemonData
+        vc.habitatName = habitatDataList[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -47,13 +48,12 @@ extension HabitatsViewController: UITableViewDelegate, UITableViewDataSource{
      }
 }
 extension HabitatsViewController{
-    func getHabitatListData(){
-        URLSessionNetwork.fetchApiData { [weak self] response in
+    func getHabitatListData(id: String){
+        URLSessionNetwork.fetchApiData(query: id) { [weak self] response in
             switch response{
             case .success(let listData):
                 if let decodedData = listData as? HabitatListModel{
-                    self?.tableData.append(decodedData.name)
-                    self?.pokemonData.append(contentsOf: decodedData.pokemon_species)
+                    self?.habitatDataList.append(decodedData.name)
                     DispatchQueue.main.async {
                         self?.tableView.reloadData()
                     }
