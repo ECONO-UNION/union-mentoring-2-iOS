@@ -11,7 +11,7 @@ class HabitatsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var habitatDataList: [String] = []
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         for i in 1..<10{
@@ -36,16 +36,18 @@ extension HabitatsViewController: UITableViewDelegate, UITableViewDataSource{
             return
         }
         vc.habitatName = habitatDataList[indexPath.row]
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-         return UITableView.automaticDimension
-     }
-     
-     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-         return UITableView.automaticDimension
-     }
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
 extension HabitatsViewController{
     func getHabitatListData(id: String){
@@ -61,7 +63,7 @@ extension HabitatsViewController{
                 }
             case .failure(let data):
                 print("fail", data)
-            
+                
             }
         }
     }

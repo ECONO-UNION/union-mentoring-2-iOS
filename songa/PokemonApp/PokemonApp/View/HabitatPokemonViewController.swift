@@ -9,7 +9,8 @@ import UIKit
 
 class HabitatPokemonViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-       
+    @IBOutlet weak var habitatNameLabel: UILabel!
+    
     var data: [PokemonSpecies] = []
     var idList: [String: Int] = [:]
     var habitatName = ""
@@ -17,6 +18,7 @@ class HabitatPokemonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getHabitatPokemonListData(name: habitatName)
+        habitatNameLabel.text = habitatName + "의 포켓몬들!"
     }
 }
 extension HabitatPokemonViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -31,6 +33,7 @@ extension HabitatPokemonViewController: UICollectionViewDelegate, UICollectionVi
         return cell
     }
 }
+
 extension HabitatPokemonViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 200, height: 200)
@@ -43,7 +46,6 @@ extension HabitatPokemonViewController{
             case .success(let listData):
                 if let decodedData = listData as? HabitatListModel{
                     self?.data.append(contentsOf: decodedData.pokemon_species)
-                    print(decodedData.pokemon_species)
                     for pokemon in decodedData.pokemon_species{
                         self?.getPokemonId(name: pokemon.name)
                     }
@@ -54,7 +56,7 @@ extension HabitatPokemonViewController{
                 }
             case .failure(let data):
                 print("fail", data)
-            
+                
             }
         }
     }
@@ -72,7 +74,7 @@ extension HabitatPokemonViewController{
                 }
             case .failure(let data):
                 print("fail", data)
-            
+                
             }
         }
     }

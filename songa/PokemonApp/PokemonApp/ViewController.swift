@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -17,6 +16,8 @@ class ViewController: UIViewController {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "HabitatsViewController") as? HabitatsViewController else {
             return
         }
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
