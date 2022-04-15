@@ -1,5 +1,5 @@
 //
-//  MenuKindSelectVC.swift
+//  MenuSelectVC.swift
 //  JiwooCafeApp
 //
 //  Created by 황지우 on 2022/03/05.
@@ -57,7 +57,7 @@ class MenuSelectVC: UIViewController, UITableViewDataSource,UITableViewDelegate 
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
         guard let orderVC = self.storyboard?.instantiateViewController(withIdentifier: "Order") as? OrderVC else{return }
         orderVC.name = menuList[indexPath.row].name
