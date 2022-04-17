@@ -13,6 +13,11 @@
 		F78EEC962809C16100EBF148 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78EEC942809C16100EBF148 /* Main.storyboard */; };
 		F78EEC982809C16300EBF148 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F78EEC972809C16300EBF148 /* Assets.xcassets */; };
 		F78EEC9B2809C16300EBF148 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78EEC992809C16300EBF148 /* LaunchScreen.storyboard */; };
+		F78EECA52809C1F500EBF148 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78EECA42809C1F500EBF148 /* Pokemon.swift */; };
+		F78EECA82809C23B00EBF148 /* PokeSpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78EECA72809C23B00EBF148 /* PokeSpecies.swift */; };
+		F78EECAA2809C88A00EBF148 /* PokeHabitat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78EECA92809C88A00EBF148 /* PokeHabitat.swift */; };
+		F78EECAE2809C96500EBF148 /* NetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78EECAD2809C96500EBF148 /* NetworkAgent.swift */; };
+		F78EECB02809C97A00EBF148 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78EECAF2809C97A00EBF148 /* NetworkConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		F78EEC972809C16300EBF148 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F78EEC9A2809C16300EBF148 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F78EEC9C2809C16300EBF148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F78EECA42809C1F500EBF148 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		F78EECA72809C23B00EBF148 /* PokeSpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeSpecies.swift; sourceTree = "<group>"; };
+		F78EECA92809C88A00EBF148 /* PokeHabitat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeHabitat.swift; sourceTree = "<group>"; };
+		F78EECAD2809C96500EBF148 /* NetworkAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAgent.swift; sourceTree = "<group>"; };
+		F78EECAF2809C97A00EBF148 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,8 @@
 		F78EEC8D2809C16100EBF148 /* PokemonProject */ = {
 			isa = PBXGroup;
 			children = (
+				F78EECAC2809C95700EBF148 /* Network */,
+				F78EECA32809C1E600EBF148 /* Model */,
 				F78EEC8E2809C16100EBF148 /* AppDelegate.swift */,
 				F78EEC902809C16100EBF148 /* SceneDelegate.swift */,
 				F78EEC922809C16100EBF148 /* ViewController.swift */,
@@ -65,6 +77,25 @@
 				F78EEC9C2809C16300EBF148 /* Info.plist */,
 			);
 			path = PokemonProject;
+			sourceTree = "<group>";
+		};
+		F78EECA32809C1E600EBF148 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F78EECA42809C1F500EBF148 /* Pokemon.swift */,
+				F78EECA72809C23B00EBF148 /* PokeSpecies.swift */,
+				F78EECA92809C88A00EBF148 /* PokeHabitat.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F78EECAC2809C95700EBF148 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F78EECAD2809C96500EBF148 /* NetworkAgent.swift */,
+				F78EECAF2809C97A00EBF148 /* NetworkConstants.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78EECB02809C97A00EBF148 /* NetworkConstants.swift in Sources */,
 				F78EEC932809C16100EBF148 /* ViewController.swift in Sources */,
+				F78EECA52809C1F500EBF148 /* Pokemon.swift in Sources */,
+				F78EECAA2809C88A00EBF148 /* PokeHabitat.swift in Sources */,
+				F78EECA82809C23B00EBF148 /* PokeSpecies.swift in Sources */,
 				F78EEC8F2809C16100EBF148 /* AppDelegate.swift in Sources */,
+				F78EECAE2809C96500EBF148 /* NetworkAgent.swift in Sources */,
 				F78EEC912809C16100EBF148 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
