@@ -47,6 +47,14 @@ class PokedexViewController: UIViewController {
       }
     }
   }
+  
+  @IBAction func goToMapButtonDidTap(_ sender: Any) {
+    let id = MapViewController.id
+    if let mapVC = storyboard?.instantiateViewController(withIdentifier: id) {
+      mapVC.modalPresentationStyle = .fullScreen
+      present(mapVC, animated: true, completion: nil)
+    }
+  }
 }
 
 extension PokedexViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

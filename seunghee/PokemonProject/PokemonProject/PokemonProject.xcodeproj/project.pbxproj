@@ -13,6 +13,10 @@
 		F72A5FB7280C60F3005DEF66 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A5FB6280C60F3005DEF66 /* PokedexViewController.swift */; };
 		F72A5FBB280C66D6005DEF66 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A5FB9280C66D6005DEF66 /* ImageCache.swift */; };
 		F72A5FBC280C66D6005DEF66 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A5FBA280C66D6005DEF66 /* ImageDownloader.swift */; };
+		F72A5FBE280C6FEC005DEF66 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A5FBD280C6FEC005DEF66 /* MapViewController.swift */; };
+		F72A5FC3280C711B005DEF66 /* HabitatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A5FC1280C711B005DEF66 /* HabitatCell.swift */; };
+		F72A5FC4280C711B005DEF66 /* HabitatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F72A5FC2280C711B005DEF66 /* HabitatCell.xib */; };
+		F72A5FC6280C72E3005DEF66 /* TotalHabitat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A5FC5280C72E3005DEF66 /* TotalHabitat.swift */; };
 		F78EEC8F2809C16100EBF148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78EEC8E2809C16100EBF148 /* AppDelegate.swift */; };
 		F78EEC912809C16100EBF148 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78EEC902809C16100EBF148 /* SceneDelegate.swift */; };
 		F78EEC932809C16100EBF148 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78EEC922809C16100EBF148 /* TestViewController.swift */; };
@@ -33,6 +37,10 @@
 		F72A5FB6280C60F3005DEF66 /* PokedexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
 		F72A5FB9280C66D6005DEF66 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		F72A5FBA280C66D6005DEF66 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		F72A5FBD280C6FEC005DEF66 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F72A5FC1280C711B005DEF66 /* HabitatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitatCell.swift; sourceTree = "<group>"; };
+		F72A5FC2280C711B005DEF66 /* HabitatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitatCell.xib; sourceTree = "<group>"; };
+		F72A5FC5280C72E3005DEF66 /* TotalHabitat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHabitat.swift; sourceTree = "<group>"; };
 		F78EEC8B2809C16100EBF148 /* PokemonProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78EEC8E2809C16100EBF148 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F78EEC902809C16100EBF148 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +72,7 @@
 			children = (
 				F78EEC922809C16100EBF148 /* TestViewController.swift */,
 				F72A5FB6280C60F3005DEF66 /* PokedexViewController.swift */,
+				F72A5FBD280C6FEC005DEF66 /* MapViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -82,6 +91,8 @@
 			children = (
 				F72A5FB2280C6033005DEF66 /* PokedexCell.swift */,
 				F72A5FB4280C605A005DEF66 /* PokedexCell.xib */,
+				F72A5FC1280C711B005DEF66 /* HabitatCell.swift */,
+				F72A5FC2280C711B005DEF66 /* HabitatCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,6 +148,7 @@
 				F78EECA72809C23B00EBF148 /* PokeSpecies.swift */,
 				F78EECA92809C88A00EBF148 /* PokeHabitat.swift */,
 				F72A5FAF280C5F3D005DEF66 /* User.swift */,
+				F72A5FC5280C72E3005DEF66 /* TotalHabitat.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F72A5FC4280C711B005DEF66 /* HabitatCell.xib in Resources */,
 				F72A5FB5280C605A005DEF66 /* PokedexCell.xib in Resources */,
 				F78EEC9B2809C16300EBF148 /* LaunchScreen.storyboard in Resources */,
 				F78EEC982809C16300EBF148 /* Assets.xcassets in Resources */,
@@ -229,10 +242,13 @@
 				F78EECA82809C23B00EBF148 /* PokeSpecies.swift in Sources */,
 				F72A5FBB280C66D6005DEF66 /* ImageCache.swift in Sources */,
 				F72A5FB0280C5F3D005DEF66 /* User.swift in Sources */,
+				F72A5FC3280C711B005DEF66 /* HabitatCell.swift in Sources */,
 				F72A5FB7280C60F3005DEF66 /* PokedexViewController.swift in Sources */,
 				F78EEC8F2809C16100EBF148 /* AppDelegate.swift in Sources */,
 				F78EECAE2809C96500EBF148 /* NetworkAgent.swift in Sources */,
 				F78EEC912809C16100EBF148 /* SceneDelegate.swift in Sources */,
+				F72A5FC6280C72E3005DEF66 /* TotalHabitat.swift in Sources */,
+				F72A5FBE280C6FEC005DEF66 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
