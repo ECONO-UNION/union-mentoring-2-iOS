@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZQh-Fk-0LK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Test View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokemonProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TestViewController" customModule="PokemonProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,6 +95,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="50.892857142857139"/>
+        </scene>
+        <!--Pokedex View Controller-->
+        <scene sceneID="k56-O6-o0n">
+            <objects>
+                <viewController storyboardIdentifier="PokedexViewController" id="ZQh-Fk-0LK" customClass="PokedexViewController" customModule="PokemonProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tCV-rq-M7z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="포켓몬 도감" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xS-VL-lXT">
+                                <rect key="frame" x="30" y="74" width="354" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QdV-nc-FkF">
+                                <rect key="frame" x="30" y="135.5" width="354" height="635.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OGG-sp-pRE">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Et9-4y-DK9">
+                                <rect key="frame" x="142.5" y="801" width="129" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="k3b-w6-IFo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="포켓몬을 만나보자!"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmq-2G-ubc">
+                                <rect key="frame" x="282" y="74" width="97" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="[TEST] 추가"/>
+                                <connections>
+                                    <action selector="testAddPokemon:" destination="ZQh-Fk-0LK" eventType="touchUpInside" id="ezh-7k-acr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eZ3-HB-qja"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QdV-nc-FkF" firstAttribute="trailing" secondItem="4xS-VL-lXT" secondAttribute="trailing" id="6xt-IB-AkO"/>
+                            <constraint firstItem="QdV-nc-FkF" firstAttribute="leading" secondItem="4xS-VL-lXT" secondAttribute="leading" id="7Gw-qq-u5D"/>
+                            <constraint firstItem="eZ3-HB-qja" firstAttribute="bottom" secondItem="Et9-4y-DK9" secondAttribute="bottom" constant="30" id="AKI-c3-Bta"/>
+                            <constraint firstItem="4xS-VL-lXT" firstAttribute="leading" secondItem="eZ3-HB-qja" secondAttribute="leading" constant="30" id="D1T-rA-k5r"/>
+                            <constraint firstItem="eZ3-HB-qja" firstAttribute="trailing" secondItem="hmq-2G-ubc" secondAttribute="trailing" constant="35" id="Dez-r4-PeZ"/>
+                            <constraint firstItem="Et9-4y-DK9" firstAttribute="top" secondItem="QdV-nc-FkF" secondAttribute="bottom" constant="30" id="Pib-xy-SK4"/>
+                            <constraint firstItem="Et9-4y-DK9" firstAttribute="centerX" secondItem="eZ3-HB-qja" secondAttribute="centerX" id="shF-BT-jZB"/>
+                            <constraint firstItem="eZ3-HB-qja" firstAttribute="trailing" secondItem="4xS-VL-lXT" secondAttribute="trailing" constant="30" id="xR6-NU-u2m"/>
+                            <constraint firstItem="QdV-nc-FkF" firstAttribute="top" secondItem="4xS-VL-lXT" secondAttribute="bottom" constant="30" id="xpY-bL-x0k"/>
+                            <constraint firstItem="4xS-VL-lXT" firstAttribute="top" secondItem="eZ3-HB-qja" secondAttribute="top" constant="30" id="zCe-81-eUZ"/>
+                            <constraint firstItem="hmq-2G-ubc" firstAttribute="top" secondItem="eZ3-HB-qja" secondAttribute="top" constant="30" id="zYF-5Z-WCE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="QdV-nc-FkF" id="Ncm-QL-Hc3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Juk-QM-fjZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787" y="51"/>
         </scene>
     </scenes>
     <resources>

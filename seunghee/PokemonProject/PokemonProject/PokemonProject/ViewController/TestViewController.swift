@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TestViewController: UIViewController {
 
   @IBOutlet weak var habitatNameLabel: UILabel!
   @IBOutlet weak var speciesNameLabel: UILabel!
@@ -21,7 +21,18 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    fetchAllHabaitat()
+//    fetchAllHabaitat()
+    
+    //test
+    let urlString = "https://pokeapi.co/api/v2/pokemon-habitat/3"
+    NetworkAgent.shared.requestGET(urlString, responseType: PokeHabitat.Response.self) { [weak self] habitat in
+      guard let self = self else { return }
+      
+      let habitat = PokeHabitat(json: habitat)
+      DispatchQueue.main.async {
+        self.habitatNameLabel.text = habitat.name
+      }
+    }
   }
 
   private func fetchAllHabaitat() {

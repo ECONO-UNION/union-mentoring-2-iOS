@@ -34,10 +34,6 @@ class NetworkAgent {
       guard let data = data else { return }
       completion(data)
       
-      let decoder = JSONDecoder()
-      if let json = try? decoder.decode(PokeSpecies.Response.self, from: data) {
-        
-      }
     }
     task.resume()
   }
@@ -63,6 +59,8 @@ class NetworkAgent {
       let decoder = JSONDecoder()
       if let json = try? decoder.decode(T.self, from: data) {
         completion(json)
+      } else {
+        print("parsing error")
       }
     }
     task.resume()
