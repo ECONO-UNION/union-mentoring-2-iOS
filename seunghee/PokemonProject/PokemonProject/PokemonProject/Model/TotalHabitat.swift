@@ -9,7 +9,7 @@ import Foundation
 
 struct TotalHabitat {
   var habitatInfoList: [HabitatInfo]
-  
+    
   init(json: Response) {
     self.habitatInfoList = json.results
   }
@@ -24,5 +24,6 @@ extension TotalHabitat {
   struct HabitatInfo: Codable {
     var name: String
     var url: String
+      
   }
 }

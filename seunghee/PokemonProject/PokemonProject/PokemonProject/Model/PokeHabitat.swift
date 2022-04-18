@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PokeHabitat {
+struct PokeHabitat: Codable {
   var id: Int
   var name: String
   var speciesInfoList: [PokeSpeciesInfo]
