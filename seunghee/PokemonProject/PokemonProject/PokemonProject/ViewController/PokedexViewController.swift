@@ -63,7 +63,6 @@ extension PokedexViewController: UICollectionViewDataSource, UICollectionViewDel
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    print("cellForItemAt")
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PokedexCell.id, for: indexPath) as? PokedexCell else {
       return UICollectionViewCell()
     }

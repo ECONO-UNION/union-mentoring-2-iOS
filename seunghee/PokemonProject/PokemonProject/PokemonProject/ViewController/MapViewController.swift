@@ -24,11 +24,11 @@ class MapViewController: UIViewController {
   }
   
   private func configureView() {
-//    let layout = UICollectionViewFlowLayout()
-//    layout.itemSize = CGSize(width: 120, height: 120)
-//    mapCollectionView.collectionViewLayout = layout
+    let layout = UICollectionViewFlowLayout()
+    layout.itemSize = CGSize(width: 120, height: 120)
+    mapCollectionView.collectionViewLayout = layout
     mapCollectionView.dataSource = self
-      mapCollectionView.delegate = self
+    mapCollectionView.delegate = self
     
     let nib = UINib(nibName: HabitatCell.id, bundle: nil)
     mapCollectionView.register(nib, forCellWithReuseIdentifier: HabitatCell.id)

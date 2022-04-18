@@ -10,6 +10,7 @@ import UIKit
 class FieldViewController: UIViewController {
 
     @IBOutlet weak var pokemonImageView: UIImageView!
+    @IBOutlet weak var pokemonNameLabel: UILabel!
     
     static let id = "FieldViewController"
     
@@ -20,8 +21,12 @@ class FieldViewController: UIViewController {
         super.viewDidLoad()
 
         fetchPokemon()
+        configureView()
     }
     
+    private func configureView(){
+        pokemonNameLabel.text = pokeSpecies?.name ?? "??"
+    }
 
     private func fetchPokemon() {
         guard let species = pokeSpecies else { return }
@@ -43,6 +48,7 @@ class FieldViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.pokemonImageView.image = pokemonImage
+                self.pokemonImageView.rotate()
             }
         }
     }

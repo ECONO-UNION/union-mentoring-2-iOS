@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B547619280D35020046BDB3 /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B547618280D35020046BDB3 /* FieldViewController.swift */; };
+		0B54761C280D4CC90046BDB3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B54761B280D4CC90046BDB3 /* UIView+Extension.swift */; };
 		F72A5FB0280C5F3D005DEF66 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A5FAF280C5F3D005DEF66 /* User.swift */; };
 		F72A5FB3280C6033005DEF66 /* PokedexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A5FB2280C6033005DEF66 /* PokedexCell.swift */; };
 		F72A5FB5280C605A005DEF66 /* PokedexCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F72A5FB4280C605A005DEF66 /* PokedexCell.xib */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		0B547618280D35020046BDB3 /* FieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
+		0B54761B280D4CC90046BDB3 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		F72A5FAF280C5F3D005DEF66 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F72A5FB2280C6033005DEF66 /* PokedexCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexCell.swift; sourceTree = "<group>"; };
 		F72A5FB4280C605A005DEF66 /* PokedexCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokedexCell.xib; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B54761A280D4CBC0046BDB3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0B54761B280D4CC90046BDB3 /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		F72A5FAD280C5C95005DEF66 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +140,7 @@
 		F78EEC8D2809C16100EBF148 /* PokemonProject */ = {
 			isa = PBXGroup;
 			children = (
+				0B54761A280D4CBC0046BDB3 /* Extension */,
 				F72A5FAE280C5CE4005DEF66 /* System */,
 				F72A5FB8280C66B0005DEF66 /* Common */,
 				F78EECA32809C1E600EBF148 /* Model */,
@@ -240,6 +251,7 @@
 				F72A5FB0280C5F3D005DEF66 /* User.swift in Sources */,
 				F72A5FC3280C711B005DEF66 /* HabitatCell.swift in Sources */,
 				F72A5FB7280C60F3005DEF66 /* PokedexViewController.swift in Sources */,
+				0B54761C280D4CC90046BDB3 /* UIView+Extension.swift in Sources */,
 				F78EEC8F2809C16100EBF148 /* AppDelegate.swift in Sources */,
 				F78EECAE2809C96500EBF148 /* NetworkAgent.swift in Sources */,
 				F78EEC912809C16100EBF148 /* SceneDelegate.swift in Sources */,
