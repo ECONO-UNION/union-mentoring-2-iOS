@@ -18,7 +18,7 @@ class MapViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-   
+    
     fetchTotalHabitat()
     configureView()
   }
@@ -43,18 +43,18 @@ class MapViewController: UIViewController {
       }
     }
   }
-    
-    private func fetchHabitat(url: String, completion: @escaping (PokeHabitat)->Void) {
-        NetworkAgent.shared.requestGET(url, responseType: PokeHabitat.Response.self) { response in
-            completion(PokeHabitat(json: response))
-        }
+  
+  private func fetchHabitat(url: String, completion: @escaping (PokeHabitat)->Void) {
+    NetworkAgent.shared.requestGET(url, responseType: PokeHabitat.Response.self) { response in
+      completion(PokeHabitat(json: response))
     }
-    
-    private func fetchSpecies(url: String, completion: @escaping (PokeSpecies)->Void) {
-        NetworkAgent.shared.requestGET(url, responseType: PokeSpecies.Response.self) { response in
-            completion(PokeSpecies(json: response))
-        }
+  }
+  
+  private func fetchSpecies(url: String, completion: @escaping (PokeSpecies)->Void) {
+    NetworkAgent.shared.requestGET(url, responseType: PokeSpecies.Response.self) { response in
+      completion(PokeSpecies(json: response))
     }
+  }
 }
 
 // MARK: - CollectionView Delegate
@@ -73,24 +73,25 @@ extension MapViewController: UICollectionViewDataSource, UICollectionViewDelegat
     cell.habitatNameLabel.text = habitatList.habitatInfoList[indexPath.row].name
     return cell
   }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedHabitatUrl = totalHabitat?.habitatInfoList[indexPath.row].url ?? ""
-        fetchHabitat(url: selectedHabitatUrl, completion: { [weak self] habiatat in
-            guard let self = self else { return }
-            
-            let randomNum = Int.random(in: 0..<habiatat.speciesInfoList.count)
-            let randomSpeciesUrl = habiatat.speciesInfoList[randomNum].url
-            
-            self.fetchSpecies(url: randomSpeciesUrl, completion: { species in
-                DispatchQueue.main.async {
-                    let id = FieldViewController.id
-                    if let fieldVC = self.storyboard?.instantiateViewController(withIdentifier: id) as? FieldViewController {
-                        fieldVC.pokeSpecies = species
-                        self.present(fieldVC, animated: true, completion: nil)
-                    }
-                }
-            })
-        })
-    }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let selectedHabitatUrl = totalHabitat?.habitatInfoList[indexPath.row].url ?? ""
+    fetchHabitat(url: selectedHabitatUrl, completion: { [weak self] habiatat in
+      guard let self = self else { return }
+      
+      let randomNum = Int.random(in: 0..<habiatat.speciesInfoList.count)
+      let randomSpeciesUrl = habiatat.speciesInfoList[randomNum].url
+      
+      self.fetchSpecies(url: randomSpeciesUrl, completion: { species in
+        DispatchQueue.main.async {
+          let id = FieldViewController.id
+          if let fieldVC = self.storyboard?.instantiateViewController(withIdentifier: id) as? FieldViewController {
+            fieldVC.pokeSpecies = species
+//            self.present(fieldVC, animated: true, completion: nil)
+            self.navigationController?.pushViewController(fieldVC, animated: true)
+          }
+        }
+      })
+    })
+  }
 }

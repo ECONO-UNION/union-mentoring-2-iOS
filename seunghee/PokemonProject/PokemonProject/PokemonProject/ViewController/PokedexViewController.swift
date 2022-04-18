@@ -34,7 +34,7 @@ class PokedexViewController: UIViewController {
   @IBAction func goToMapButtonDidTap(_ sender: Any) {
     let id = MapViewController.id
     if let mapVC = storyboard?.instantiateViewController(withIdentifier: id) {
-      present(mapVC, animated: true, completion: nil)
+      navigationController?.pushViewController(mapVC, animated: true)
     }
   }
 }
