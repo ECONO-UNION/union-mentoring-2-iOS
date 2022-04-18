@@ -71,7 +71,7 @@ class TestViewController: UIViewController {
         DispatchQueue.main.async {
           self.speciesNameLabel.text = self.loadedSpecies?.name
         }
-        print("catch rate: \(self.loadedSpecies?.catureRate)")
+        print("catch rate: \(self.loadedSpecies?.captureRate)")
       }
     }
 

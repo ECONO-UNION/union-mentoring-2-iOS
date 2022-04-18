@@ -12,7 +12,7 @@ struct PokeSpecies {
   var id: Int         // id
   var name: String    // 이름
   var habitatName: String // 서식지
-  var catureRate: Int // 포획률 (the higher the number, the easier the catch, 0~255)
+  var captureRate: Int // 포획률 (the higher the number, the easier the catch, 0~255)
   
   var habitat: HabitatInfo?
     
@@ -20,7 +20,7 @@ struct PokeSpecies {
     self.id = json.id
     self.name = PokeSpecies.getKorName(from: json.names) ?? json.name
     self.habitat = json.habitat
-    self.catureRate = json.capture_rate
+    self.captureRate = json.capture_rate
     
     self.habitatName = json.habitat?.name ?? ""
   }

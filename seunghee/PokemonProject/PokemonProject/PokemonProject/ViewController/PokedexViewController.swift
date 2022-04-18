@@ -27,31 +27,13 @@ class PokedexViewController: UIViewController {
     collectionView.register(nib, forCellWithReuseIdentifier: PokedexCell.id)
   }
   
-  @IBAction func testAddPokemon(_ sender: Any) {
-    var randNumberList: [Int] = []
-    for _ in 0..<15 {
-      let randomNum = Int.random(in: 1...100)
-      if randNumberList.contains(randomNum) {
-        continue
-      }
-      randNumberList.append(randomNum)
-      let urlString = NetworkConstants.pokemonAPI + String(randomNum)
-      NetworkAgent.shared.requestGET(urlString,
-                                     responseType: Pokemon.Response.self) { response in
-        let pokemon = Pokemon(json: response)
-        User.shared.ownedPokemonList.append(pokemon)
-        
-        DispatchQueue.main.async {
-          self.collectionView.reloadData()
-        }
-      }
-    }
+  @IBAction func testReloadButtonDidTap(_ sender: Any) {
+    collectionView.reloadData()
   }
   
   @IBAction func goToMapButtonDidTap(_ sender: Any) {
     let id = MapViewController.id
     if let mapVC = storyboard?.instantiateViewController(withIdentifier: id) {
-      mapVC.modalPresentationStyle = .fullScreen
       present(mapVC, animated: true, completion: nil)
     }
   }

@@ -18,4 +18,10 @@ class User {
   }
   
   var ownedPokemonList: [Pokemon] = []
+  
+  func addPokemon(_ pokemon: Pokemon) {
+    if ownedPokemonList.filter({$0.id == pokemon.id}).isEmpty {
+      ownedPokemonList.append(pokemon)
+    }
+  }
 }
