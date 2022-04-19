@@ -55,7 +55,7 @@ class FieldViewController: UIViewController {
         DispatchQueue.main.async {
           if imageUrl == sprites.front_default {
             self.pokemonImageView.image = pokemonImage
-            self.pokemonImageView.rotate()
+            self.pokemonImageView.startRotate()
           }
         }
       }
@@ -71,14 +71,14 @@ class FieldViewController: UIViewController {
       descriptionLabel.text = "을(를) 잡았다!"
       descriptionLabel.textColor = .orange
       User.shared.addPokemon(pokemon)
-      changeImageView(url: pokemon.sprites?.front_shiny ?? "")
+      changeImageView(url: pokemon.sprites?.front_shiny ?? "", isRotate: false)
       dismissViewController()
     } else {
       let escapingPercentage = Double(pokeSpecies?.captureRate ?? 0) * 0.3
       if randomNum < Int(escapingPercentage) {
         descriptionLabel.text = "이(가) 도망갔다."
         descriptionLabel.textColor = .cyan
-        changeImageView(url: pokemon.sprites?.back_default ?? "")
+          changeImageView(url: pokemon.sprites?.back_default ?? "", isRotate: false)
         dismissViewController()
       } else {
         descriptionLabel.text = "이(가) 잡히지 않았다."
@@ -93,10 +93,15 @@ class FieldViewController: UIViewController {
     })
   }
   
-  private func changeImageView(url: String) {
+    private func changeImageView(url: String, isRotate: Bool = false) {
     ImageDownloader.shared.downloadImage(from: url, completion: { image in
       DispatchQueue.main.async {
         self.pokemonImageView.image = image
+          if isRotate {
+              self.pokemonImageView.startRotate()
+          } else {
+              self.pokemonImageView.stopRotate()
+          }
       }
     })
   }
