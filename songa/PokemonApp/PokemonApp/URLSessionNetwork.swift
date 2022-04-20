@@ -9,7 +9,7 @@ import Foundation
 
 class URLSessionNetwork{
     
-    static func fetchApiData(query: String, completion: @escaping (Result<Any, Error>) -> ()){
+    static func fetchPokemonHabitatApiData(query: String, completion: @escaping (Result<Any, Error>) -> ()){
         let urlString = "https://pokeapi.co/api/v2/pokemon-habitat/\(query)/"
         if let url = URL(string: urlString) {
             let session = URLSession(configuration: .default)
@@ -32,7 +32,7 @@ class URLSessionNetwork{
         }
     }
     
-    static func getPokemonIdData(name: String, completion: @escaping (Result<Any, Error>) -> ()){
+    static func fetchPokemonApiIdData(name: String, completion: @escaping (Result<Any, Error>) -> ()){
         let urlString = "https://pokeapi.co/api/v2/pokemon/\(name)/"
         if let url = URL(string: urlString) {
             let session = URLSession(configuration: .default)

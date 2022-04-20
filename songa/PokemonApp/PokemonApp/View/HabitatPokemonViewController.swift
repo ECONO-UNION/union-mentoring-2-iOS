@@ -11,25 +11,25 @@ class HabitatPokemonViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var habitatNameLabel: UILabel!
     
-    var data: [PokemonSpecies] = []
-    var idList: [String: Int] = [:]
+    var pokemonSpeciesList: [PokemonSpecies] = []
+    var pokemonNameIdDict: [String: Int] = [:]
     var habitatName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getHabitatPokemonListData(name: habitatName)
+        fetchHabitatPokemonListData(name: habitatName)
         habitatNameLabel.text = habitatName + "의 포켓몬들!"
     }
 }
 extension HabitatPokemonViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return pokemonSpeciesList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokemonCollectionViewCell", for: indexPath) as? PokemonCollectionViewCell else{ return UICollectionViewCell() }
-        cell.nameLabel.text = data[indexPath.row].name
-        cell.pokemonImageView.setImageWithUrl("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(String(idList[data[indexPath.row].name] ?? 0)).png")
+        cell.nameLabel.text = pokemonSpeciesList[indexPath.row].name
+        cell.pokemonImageView.setImageWithUrl("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(String(pokemonNameIdDict[pokemonSpeciesList[indexPath.row].name] ?? 0)).png")
         return cell
     }
 }
@@ -40,14 +40,14 @@ extension HabitatPokemonViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 extension HabitatPokemonViewController{
-    func getHabitatPokemonListData(name: String){
-        URLSessionNetwork.fetchApiData(query: name) { [weak self] response in
+    func fetchHabitatPokemonListData(name: String){
+        URLSessionNetwork.fetchPokemonHabitatApiData(query: name) { [weak self] response in
             switch response{
             case .success(let listData):
                 if let decodedData = listData as? HabitatListModel{
-                    self?.data.append(contentsOf: decodedData.pokemon_species)
+                    self?.pokemonSpeciesList.append(contentsOf: decodedData.pokemon_species)
                     for pokemon in decodedData.pokemon_species{
-                        self?.getPokemonId(name: pokemon.name)
+                        self?.fetchPokemonId(name: pokemon.name)
                     }
                     DispatchQueue.main.async {
                         self?.collectionView.reloadData()
@@ -61,14 +61,22 @@ extension HabitatPokemonViewController{
         }
     }
     
-    func getPokemonId(name: String){
-        URLSessionNetwork.getPokemonIdData(name: name) { [weak self] response in
+    func fetchPokemonId(name: String){
+        URLSessionNetwork.fetchPokemonApiIdData(name: name) { [weak self] response in
             switch response{
             case .success(let data):
                 if let decodedData = data as? PokemonModel{
-                    self?.idList[name] = decodedData.id
-                    DispatchQueue.main.async {
-                        self?.collectionView.reloadData()
+                    self?.pokemonNameIdDict[name] = decodedData.id
+                    DispatchQueue.main.async { [weak self] in
+                        guard let self = self else{ return }
+                        for i in 0..<self.pokemonSpeciesList.count{
+                            if self.pokemonSpeciesList[i].name == name{
+                                let indexPath = Array(repeating: IndexPath(item: i, section: 0), count: 1)
+                                self.collectionView.reloadItems(at: indexPath)
+                                break
+                            }
+                        }
+                        
                     }
                     return
                 }

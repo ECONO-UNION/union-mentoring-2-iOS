@@ -15,7 +15,7 @@ class HabitatsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         for i in 1..<10{
-            getHabitatListData(id: String(i))
+            fetchHabitatListData(id: String(i))
         }
     }
 }
@@ -36,7 +36,6 @@ extension HabitatsViewController: UITableViewDelegate, UITableViewDataSource{
             return
         }
         vc.habitatName = habitatDataList[indexPath.row]
-        self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -50,8 +49,8 @@ extension HabitatsViewController: UITableViewDelegate, UITableViewDataSource{
     }
 }
 extension HabitatsViewController{
-    func getHabitatListData(id: String){
-        URLSessionNetwork.fetchApiData(query: id) { [weak self] response in
+    func fetchHabitatListData(id: String){
+        URLSessionNetwork.fetchPokemonHabitatApiData(query: id) { [weak self] response in
             switch response{
             case .success(let listData):
                 if let decodedData = listData as? HabitatListModel{
