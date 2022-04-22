@@ -18,6 +18,28 @@ class FieldViewController: UIViewController {
   var pokeSpecies: PokeSpecies?
   var pokemon: Pokemon?
   
+  enum CatchResult {
+    case captured
+    case miss
+    case runAway
+    
+    var description: String {
+      switch self {
+      case .captured: return "을(를) 잡았다!"
+      case .miss:     return "이(가) 잡히지 않았다."
+      case .runAway:  return "이(가) 도망갔다."
+      }
+    }
+    
+    var textColor: UIColor {
+      switch self {
+      case .captured: return .orange
+      case .miss:     return .black
+      case .runAway:  return .cyan
+      }
+    }
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -28,7 +50,7 @@ class FieldViewController: UIViewController {
   private func configureView(){
     pokemonNameLabel.text = pokeSpecies?.name ?? "??"
     descriptionLabel.text = "이(가) 나타났다!"
-    descriptionLabel.textColor = .white
+    descriptionLabel.textColor = .black
   }
   
   private func fetchPokemon() {
@@ -39,6 +61,7 @@ class FieldViewController: UIViewController {
       guard let self = self else { return }
       
       self.pokemon = Pokemon(json: response)
+      self.pokemon?.pokeSpacies = self.pokeSpecies
       self.fetchPokemonImage()
     }
   }
@@ -63,46 +86,60 @@ class FieldViewController: UIViewController {
   }
   
   @IBAction func throwButtonDidTap(_ sender: Any) {
-    guard let pokemon = pokemon else { return}
+    let captureResult = getCatchResult()
+    updateView(state: captureResult)
+  }
+  
+  private func getCatchResult() -> CatchResult {
+    let captureRate: Int = pokeSpecies?.captureRate ?? 0
+    let runAwayRate: Int = Int(Double(255 - captureRate) * 0.3)
+    let random = Int.random(in: 0...255)
+    print("\(random) / \(captureRate) / \(runAwayRate)")
 
-    let randomNum = Int.random(in: 0...255)
-    print("capture rate: \(pokeSpecies?.captureRate ?? 0), randomNum: \(randomNum)")
-    if randomNum <= pokeSpecies?.captureRate ?? 0 {
-      descriptionLabel.text = "을(를) 잡았다!"
-      descriptionLabel.textColor = .orange
-      User.shared.addPokemon(pokemon)
-      changeImageView(url: pokemon.sprites?.front_shiny ?? "", isRotate: false)
-      dismissViewController()
+    if random <= captureRate {
+      return .captured
+    } else if random <= runAwayRate {
+      return .runAway
     } else {
-      let escapingPercentage = Double(pokeSpecies?.captureRate ?? 0) * 0.3
-      if randomNum < Int(escapingPercentage) {
-        descriptionLabel.text = "이(가) 도망갔다."
-        descriptionLabel.textColor = .cyan
-          changeImageView(url: pokemon.sprites?.back_default ?? "", isRotate: false)
-        dismissViewController()
-      } else {
-        descriptionLabel.text = "이(가) 잡히지 않았다."
-        descriptionLabel.textColor = .white
-      }
+      return .miss
     }
   }
   
-  private func dismissViewController() {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
-      self.navigationController?.popViewController(animated: true)
-    })
+  private func updateView(state: CatchResult) {
+    guard let pokemon = self.pokemon else { return }
+    descriptionLabel.text = state.description
+    descriptionLabel.textColor = state.textColor
+    
+    switch state {
+    case .captured:
+      User.shared.addPokemon(pokemon)
+      changeImageView(url: pokemon.sprites?.front_shiny ?? "", isRotate: false)
+      dismissViewController()
+    case .runAway:
+      changeImageView(url: pokemon.sprites?.back_default ?? "", isRotate: false)
+      dismissViewController()
+    case .miss:
+      break
+    }
   }
   
-    private func changeImageView(url: String, isRotate: Bool = false) {
+  private func changeImageView(url: String, isRotate: Bool = false) {
     ImageDownloader.shared.downloadImage(from: url, completion: { image in
       DispatchQueue.main.async {
         self.pokemonImageView.image = image
-          if isRotate {
-              self.pokemonImageView.startRotate()
-          } else {
-              self.pokemonImageView.stopRotate()
-          }
+        if isRotate {
+          self.pokemonImageView.startRotate()
+        } else {
+          self.pokemonImageView.stopRotate()
+        }
       }
+    })
+  }
+  
+  private func dismissViewController() {
+    self.view.isUserInteractionEnabled = false
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+      self.navigationController?.popViewController(animated: true)
     })
   }
 }

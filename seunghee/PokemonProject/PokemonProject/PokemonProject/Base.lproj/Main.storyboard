@@ -44,18 +44,6 @@
                                     <action selector="goToMapButtonDidTap:" destination="ZQh-Fk-0LK" eventType="touchUpInside" id="377-kY-khJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFU-6Z-rep">
-                                <rect key="frame" x="324" y="104" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="TJi-2i-DY9"/>
-                                    <constraint firstAttribute="height" constant="60" id="bLH-nX-c14"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system"/>
-                                <connections>
-                                    <action selector="testReloadButtonDidTap:" destination="ZQh-Fk-0LK" eventType="touchUpInside" id="pIv-w2-3Jo"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eZ3-HB-qja"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -64,8 +52,6 @@
                             <constraint firstItem="QdV-nc-FkF" firstAttribute="leading" secondItem="4xS-VL-lXT" secondAttribute="leading" id="7Gw-qq-u5D"/>
                             <constraint firstItem="eZ3-HB-qja" firstAttribute="bottom" secondItem="Et9-4y-DK9" secondAttribute="bottom" constant="30" id="AKI-c3-Bta"/>
                             <constraint firstItem="4xS-VL-lXT" firstAttribute="leading" secondItem="eZ3-HB-qja" secondAttribute="leading" constant="30" id="D1T-rA-k5r"/>
-                            <constraint firstItem="nFU-6Z-rep" firstAttribute="centerY" secondItem="4xS-VL-lXT" secondAttribute="centerY" id="Gh7-4O-KPK"/>
-                            <constraint firstItem="nFU-6Z-rep" firstAttribute="trailing" secondItem="4xS-VL-lXT" secondAttribute="trailing" id="NaG-83-pS8"/>
                             <constraint firstItem="Et9-4y-DK9" firstAttribute="top" secondItem="QdV-nc-FkF" secondAttribute="bottom" constant="30" id="Pib-xy-SK4"/>
                             <constraint firstItem="Et9-4y-DK9" firstAttribute="centerX" secondItem="eZ3-HB-qja" secondAttribute="centerX" id="shF-BT-jZB"/>
                             <constraint firstItem="eZ3-HB-qja" firstAttribute="trailing" secondItem="4xS-VL-lXT" secondAttribute="trailing" constant="30" id="xR6-NU-u2m"/>
@@ -126,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DYr-2O-IFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2201" y="51"/>
+            <point key="canvasLocation" x="2771" y="51"/>
         </scene>
         <!--Field View Controller-->
         <scene sceneID="PN9-8r-2jQ">
@@ -197,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="31j-CR-PmH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2890" y="51"/>
+            <point key="canvasLocation" x="3461" y="51"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nT7-Or-Qph">
@@ -219,7 +205,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="pokeball" width="64" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

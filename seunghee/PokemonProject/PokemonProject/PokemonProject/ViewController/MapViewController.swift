@@ -71,6 +71,7 @@ extension MapViewController: UICollectionViewDataSource, UICollectionViewDelegat
     guard let habitatList = totalHabitat else { return UICollectionViewCell() }
     
     cell.habitatNameLabel.text = habitatList.habitatInfoList[indexPath.row].name
+    cell.setCornerRadius()
     return cell
   }
   
@@ -79,15 +80,14 @@ extension MapViewController: UICollectionViewDataSource, UICollectionViewDelegat
     fetchHabitat(url: selectedHabitatUrl, completion: { [weak self] habiatat in
       guard let self = self else { return }
       
-      let randomNum = Int.random(in: 0..<habiatat.speciesInfoList.count)
-      let randomSpeciesUrl = habiatat.speciesInfoList[randomNum].url
+      let random = Int.random(in: 0..<habiatat.speciesInfoList.count)
+      let randomSpeciesUrl = habiatat.speciesInfoList[random].url
       
       self.fetchSpecies(url: randomSpeciesUrl, completion: { species in
         DispatchQueue.main.async {
           let id = FieldViewController.id
           if let fieldVC = self.storyboard?.instantiateViewController(withIdentifier: id) as? FieldViewController {
             fieldVC.pokeSpecies = species
-//            self.present(fieldVC, animated: true, completion: nil)
             self.navigationController?.pushViewController(fieldVC, animated: true)
           }
         }

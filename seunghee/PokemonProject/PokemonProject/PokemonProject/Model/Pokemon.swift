@@ -20,9 +20,8 @@ struct Pokemon {
     self.id = json.id
     self.name = json.name
     self.species = json.species
-    self.sprites = json.sprites
+    self.sprites = json.sprites    
   }
-  
 }
 
 // MARK: - Poke Species Property Types
@@ -46,6 +45,3 @@ extension Pokemon {
     var front_shiny: String?
   }
 }
-
-
-

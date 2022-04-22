@@ -12,6 +12,7 @@ class NetworkAgent {
   enum NetworkError: Error {
     case invalidUrl
     case serverError
+    case parsingError
   }
   
   static var shared = NetworkAgent()

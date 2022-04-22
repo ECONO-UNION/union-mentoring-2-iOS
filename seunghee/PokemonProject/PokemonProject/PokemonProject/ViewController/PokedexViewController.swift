@@ -15,6 +15,13 @@ class PokedexViewController: UIViewController {
     super.viewDidLoad()
     
     configureView()
+    
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    collectionView.reloadData()
   }
   
   private func configureView() {
@@ -22,13 +29,10 @@ class PokedexViewController: UIViewController {
     layout.itemSize = CGSize(width: 80, height: 80)
     collectionView.collectionViewLayout = layout
     collectionView.dataSource = self
+    collectionView.delegate = self
     
     let nib = UINib(nibName: PokedexCell.id, bundle: nil)
     collectionView.register(nib, forCellWithReuseIdentifier: PokedexCell.id)
-  }
-  
-  @IBAction func testReloadButtonDidTap(_ sender: Any) {
-    collectionView.reloadData()
   }
   
   @IBAction func goToMapButtonDidTap(_ sender: Any) {
@@ -57,5 +61,14 @@ extension PokedexViewController: UICollectionViewDataSource, UICollectionViewDel
       }
     }
     return cell
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let selectedPokemon = User.shared.ownedPokemonList[indexPath.row]
+    guard let species = selectedPokemon.pokeSpacies else { return }
+    let descriptionView = PokedexDescriptionView()
+    descriptionView.updateLabel(species: species)
+    self.view.addSubview(descriptionView)
+    descriptionView.setConstraintEqualTo(self.view)
   }
 }

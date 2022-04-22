@@ -12,7 +12,7 @@
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokedexCell" id="mpj-tz-3kS" customClass="PokedexCell" customModule="PokemonProject" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="84" height="83"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="G9N-fK-FiC">
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="G9N-fK-FiC">
                 <rect key="frame" x="0.0" y="0.0" width="84" height="83"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
