@@ -50,7 +50,7 @@ extension HabitatsViewController: UITableViewDelegate, UITableViewDataSource{
 }
 extension HabitatsViewController{
     func fetchHabitatListData(id: String){
-        URLSessionNetwork.fetchPokemonHabitatApiData(query: id) { [weak self] response in
+        URLSessionNetwork.fetchApiData("https://pokeapi.co/api/v2/pokemon-habitat/\(id)/",responseType: HabitatListModel.self) { [weak self] response in
             switch response{
             case .success(let listData):
                 if let decodedData = listData as? HabitatListModel{

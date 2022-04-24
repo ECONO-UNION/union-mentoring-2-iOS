@@ -9,9 +9,8 @@ import Foundation
 
 class URLSessionNetwork{
     
-    static func fetchPokemonHabitatApiData(query: String, completion: @escaping (Result<Any, Error>) -> ()){
-        let urlString = "https://pokeapi.co/api/v2/pokemon-habitat/\(query)/"
-        if let url = URL(string: urlString) {
+    static func fetchApiData<T: Decodable>(_ urlString: String, responseType: T.Type, completion: @escaping (Result<T, Error>) -> ()){
+        guard let url = URL(string: urlString) else{ return }
             let session = URLSession(configuration: .default)
             let requestURL = URLRequest(url: url)
             let dataTask = session.dataTask(with: requestURL){ (data, response, error) in
@@ -19,9 +18,14 @@ class URLSessionNetwork{
                     print(error!)
                     return
                 }
+                guard let httpResponse = response as? HTTPURLResponse,
+                            (200...299).contains(httpResponse.statusCode) else {
+                                print("server error: \(response)")
+                                return }
+                
                 if let safeData = data {
                     do{
-                        let decodedData = try JSONDecoder().decode(HabitatListModel.self, from: safeData)
+                        let decodedData = try JSONDecoder().decode(T.self, from: safeData)
                         completion(.success(decodedData))
                     }catch{
                         print(error.localizedDescription)
@@ -29,29 +33,5 @@ class URLSessionNetwork{
                 }
             }
             dataTask.resume()
-        }
-    }
-    
-    static func fetchPokemonApiIdData(name: String, completion: @escaping (Result<Any, Error>) -> ()){
-        let urlString = "https://pokeapi.co/api/v2/pokemon/\(name)/"
-        if let url = URL(string: urlString) {
-            let session = URLSession(configuration: .default)
-            let requestURL = URLRequest(url: url)
-            let dataTask = session.dataTask(with: requestURL){ (data, response, error) in
-                if error != nil {
-                    print(error!)
-                    return
-                }
-                if let safeData = data {
-                    do{
-                        let decodedData = try JSONDecoder().decode(PokemonModel.self, from: safeData)
-                        completion(.success(decodedData))
-                    }catch{
-                        print(error.localizedDescription)
-                    }
-                }
-            }
-            dataTask.resume()
-        }
     }
 }

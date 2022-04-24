@@ -41,7 +41,7 @@ extension HabitatPokemonViewController: UICollectionViewDelegateFlowLayout {
 }
 extension HabitatPokemonViewController{
     func fetchHabitatPokemonListData(name: String){
-        URLSessionNetwork.fetchPokemonHabitatApiData(query: name) { [weak self] response in
+        URLSessionNetwork.fetchApiData("https://pokeapi.co/api/v2/pokemon-habitat/\(name)/",responseType: HabitatListModel.self) { [weak self] response in
             switch response{
             case .success(let listData):
                 if let decodedData = listData as? HabitatListModel{
@@ -62,7 +62,7 @@ extension HabitatPokemonViewController{
     }
     
     func fetchPokemonId(name: String){
-        URLSessionNetwork.fetchPokemonApiIdData(name: name) { [weak self] response in
+        URLSessionNetwork.fetchApiData("https://pokeapi.co/api/v2/pokemon/\(name)/", responseType: PokemonModel.self) { [weak self] response in
             switch response{
             case .success(let data):
                 if let decodedData = data as? PokemonModel{
