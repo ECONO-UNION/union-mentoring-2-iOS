@@ -44,7 +44,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AlV-rx-iHD" secondAttribute="bottom" constant="21" id="Aac-W6-jaf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3FZ-vl-C3T" secondAttribute="trailing" constant="20" id="HEu-3L-3Wh"/>
                             <constraint firstItem="3FZ-vl-C3T" firstAttribute="top" secondItem="E3c-g7-sEc" secondAttribute="bottom" constant="19" id="LKL-xw-BQI"/>
-                            <constraint firstItem="AlV-rx-iHD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N1U-Nd-JQO"/>
+                            <constraint firstItem="3FZ-vl-C3T" firstAttribute="leading" secondItem="AlV-rx-iHD" secondAttribute="trailing" constant="17.5" id="RWf-Q3-aew"/>
                             <constraint firstItem="E3c-g7-sEc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xjt-7c-lss"/>
                             <constraint firstItem="AlV-rx-iHD" firstAttribute="top" secondItem="E3c-g7-sEc" secondAttribute="bottom" constant="21" id="YFD-9V-Gf7"/>
                             <constraint firstItem="E3c-g7-sEc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ovW-8f-1Vx"/>
@@ -70,14 +70,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HabitatListTableViewCell" id="JwR-Q7-Vpq" customClass="HabitatListTableViewCell" customModule="PokemonApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="59"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="59.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JwR-Q7-Vpq" id="B6j-2l-Dn6">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7l-Op-mzk">
-                                                    <rect key="frame" x="30" y="16" width="354" height="27"/>
+                                                    <rect key="frame" x="30" y="16" width="354" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
